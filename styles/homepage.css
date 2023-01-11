@@ -30,7 +30,7 @@ body {
 }
 
 #header-home nav {
-    float: right;
+    float: right; 
     display: inline-flex;
     flex-direction: row;
     max-width: 600px;
