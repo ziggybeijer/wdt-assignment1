@@ -1,12 +1,13 @@
 :root {
     --text-color: #05141A;
+    --text-hover-color: #627a5d;
     --primary-color: #d4e9c6;
-    --secondary-color: #FBFDF2;
+     --secondary-color: #FBFDF2;
 }
 
 * {
     font-family:  "Poppins";
-    color: #05141A;
+    color: var(--text-color);
     margin: 0px;
     padding: 0px;
 }
@@ -26,7 +27,6 @@ body {
 }
 
 #logo {
-    width: auto;
     height: 40px;
 }
 
@@ -37,6 +37,7 @@ body {
     max-width: 600px;
     column-gap: 25px;
     height: 40px;
+    align-items: center;
 }
 
 #form {
@@ -46,21 +47,22 @@ body {
     height: 100%;
 }
 
-#shopping-cart {
-    width: auto;
+#shopping-cart-a {
+    display: flex;
     height: 100%; 
 }
 
 #searchbar {
     padding-left: 10px;
-    height: 40px;
     border: none;
-    background-color: transparent;    
+    background-color: transparent;   
+    outline: none; 
 }
 
 #searchbar::placeholder {
     color: var(--text-color);
 }
+
 #searchbarbutton {
     background-color: transparent;
     border: none;
@@ -69,8 +71,7 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: auto;
-    height: 40px;
+    height: 100%;
     
   }
 #additem {
@@ -79,7 +80,7 @@ body {
 }
 #additem:hover {
     text-decoration: underline;
-    color: var(--secondary-color);
+    color: black;
     transition-duration: 0.3s;
 }
 
@@ -102,7 +103,6 @@ body {
     left: 600px;
     position: relative;
     width: 150px;
-    height: auto;
     bottom: 250px;
 }
 #wrapper1 {
