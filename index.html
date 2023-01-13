@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,18 +15,25 @@
 <body>
     <header id="header-home">
         <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+        
         <nav>
-            <a href="add-item.html"id="additem">Add an item!</a>
+
             <form action="search.html" id="form">
-                <input type="text" placeholder="Search.." name="searchbar" id="searchbar">
+                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
                 <button type="submit" id="searchbarbutton"><img id="searchbarimage" src="images/searchbar.png"> </button>
             </form>
-            <a href="shoppingcart.html"><img id="shopping-cart" src="images/shopping_cart.png" alt="shopping cart"></a>          
+            <a href="add-item.html" id="additem">Add an item</a>
+            <a href="sign-in.html" id ="signin">sign in</a>  
+            <a href="sign-up.html" id ="signup">sign up</a>
+          
+            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>          
         </nav>
+
         <h1 id="homeh1">Barter Bazaar</h1>
         <p id="homep">The best Bazaar to barter!</p>
-        <img id="homeimage"src="images/Bazaar_image.png" alt="bazaar">
+        <img id="homeimage" src="images/Bazaar_image.png" alt="Bazaar the bear">
     </header>
+
     <div id="wrapper1">
         <p id="wrapper1text">
             Barter Bazaar is the place to buy and sell items.
@@ -38,14 +44,16 @@
             Mauris lacinia nulla quis vehicula scelerisque. Fusce consequat ornare tortor eu cursus.
             So sign up now!
         </p>
-        <div id="wrapper1buttons">
-            <a href="sign-up.html"><button>sign up!</button></a>  
-            <a href="sign-in.html"><button>sign in!</button></a>
-        </div>
+        
         
     </div>
+    <hr>
     <footer>
-
+        <div class="footer-left">
+            <p>© Barter Bazaar B.B. 2023</p>
+            <!-- https://icons8.com/icon/set/logos/fluency-systems-regular -->
+            <img src="images/logo.png">
+        </div>
     </footer>
 </body>
 </html>
