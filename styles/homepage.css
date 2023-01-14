@@ -16,7 +16,7 @@ body {
     background-color: var(--secondary-color);
 }
 
-#header-home {
+#home-header {
     background: radial-gradient(var(--secondary-color), var(--primary-color));
     padding: 10px;
     height: 100vh;
@@ -26,111 +26,97 @@ body {
     height: 40px;
 }
 
-#header-home nav {
+nav {
     width: 90%;
-    float: right; 
+    float: right;
     display: inline-flex;
-    flex-direction: row;
     column-gap: 25px;
     height: 40px;
     align-items: center;
     justify-content: right;
 }
 
-#form {
+#search-form {
     max-width: 300px;
     border: 1px solid black;
     border-radius: 18px;
+    box-sizing: border-box;
     display: flex;
     height: 100%;
     flex-grow: 2;
-}
-
-#shopping-cart-a {
-    display: flex;
-    height: 100%; 
+    padding-left: 10px;
 }
 
 #searchbar {
     width: 90%;
-    padding-left: 10px;
     border: none;
-    background-color: transparent;   
-    outline: none; 
+    background-color: transparent;
+    outline: none;
 }
 
 #searchbar::placeholder {
     color: var(--text-color);
 }
 
-#searchbarbutton {
-    background-color: transparent;
-    border: none;
-}
-#searchbarimage {
+#searchbar-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+#searchbar-image {
     height: 100%;
-    
-  }
-#additem {
+}
+
+#shopping-cart-a {
+    display: flex;
+    height: 100%;
+}
+
+nav a {
     font-weight: 1000;
     text-decoration: underline;
     text-decoration-color: transparent;
+    /* Ik weet niet precies wat je hier nog mee wilde doen: */
     /* min-width: ; */
-    
 }
-#additem:hover {
+
+nav a:hover {
     text-decoration-color: var(--text-hover-color);
     color: var(--text-hover-color);
     transition-duration: 0.5s;
 }
 
-#signin {
-    font-weight: 1000;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    
-}
-#signin:hover {
-    text-decoration-color: var(--text-hover-color);
-    color: var(--text-hover-color);
-    transition-duration: 0.5s;
-}
 #signup {
+    /* Maybe dit een button maken, zodat ie goed outlinet met de height */
     padding: 5px;
-    font-weight: 1000;
-    text-decoration: underline;
-    text-decoration-color: transparent;
     border: 1px solid var(--text-color);
     border-radius: 8px;
-    
 }
+
 #signup:hover {
     background-color: #2b7220;
     border-color: var(--text-hover-color);
-    text-decoration-color: var(--text-hover-color);
-    color: var(--text-hover-color);
-    transition-duration: 0.5s;
 }
 
-#homeh1 {
-    margin-left: 100px;
-    margin-top: 350px;
+h1 {
     font-family: "Alfa Slab One";
     font-weight: normal;
     font-size: 55px;
 }
 
-#homep {
+#home-title {
+    margin-left: 100px;
+    margin-top: 350px;
+}
+
+#home-subtitle {
     margin-left: 100px;
     margin-top: 25px;
-    padding: 0px;
     font-size: 26px;
 }
 
-#homeimage {
+#home-image {
     left: 600px;
     position: relative;
     width: 150px;
@@ -139,17 +125,15 @@ body {
 
 #wrapper1 {
     display: flex;
-    height: 100vh;
     justify-content: space-evenly;
 }
 
-#wrapper1text {
-    padding-top: 100px;
+#wrapper1 p {
+    margin: 100px 0px;
     width: 40%;
-    padding-left: 25px;
 }
 
-#wrapper1buttons {
+/* #wrapper1buttons {
     padding-top: 100px;
     display: flex;
     list-style-type: none;
@@ -170,6 +154,10 @@ body {
     height: 150px;
     width: 250px ;
     background-color: var(--primary-color);
+} */
+
+hr {
+    margin: 0px 10px;
 }
 
 footer {
@@ -177,14 +165,19 @@ footer {
     padding: 10px;
 }
 
-.footer-left {
-    display: flex;
+#footer-left {
+    display: inline-flex;
     height: 100%;
-    flex-direction: row;
     align-items: center;
 }
 
-.footer-left img {
+#footer-right {
+    float: right;
+    display: inline-flex;
+    height: 100%;
+}
+
+#footer-right a {
     display: flex;
     height: 100%;
 }
