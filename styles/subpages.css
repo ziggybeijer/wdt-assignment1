@@ -17,9 +17,9 @@ body {
 }
 
 #header-home {
-    background: radial-gradient(var(--secondary-color), var(--primary-color));
+    background-color: var(--primary-color);
     padding: 10px;
-    height: 100vh;
+    height: 40px;
 }
 
 #logo {
@@ -36,10 +36,6 @@ body {
     align-items: center;
     justify-content: right;
 }
-#shopping-cart-a {
-    display: flex;
-    height: 100%; 
-}
 
 #form {
     max-width: 300px;
@@ -48,6 +44,11 @@ body {
     display: flex;
     height: 100%;
     flex-grow: 2;
+}
+
+#shopping-cart-a {
+    display: flex;
+    height: 100%; 
 }
 
 #searchbar {
@@ -67,6 +68,8 @@ body {
     border: none;
 }
 #searchbarimage {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     height: 100%;
     
@@ -111,41 +114,87 @@ body {
     color: var(--text-hover-color);
     transition-duration: 0.5s;
 }
-
-#homeh1 {
-    margin-left: 100px;
-    margin-top: 350px;
-    font-family: "Alfa Slab One";
-    font-weight: normal;
-    font-size: 55px;
-}
-
-#homep {
-    margin-left: 100px;
-    margin-top: 25px;
-    padding: 0px;
-    font-size: 26px;
-}
-
-#homeimage {
-    left: 600px;
-    position: relative;
-    width: 150px;
-    bottom: 250px;
-}
-
-#wrapper1 {
+#shopping_cart_wrapper {
     display: flex;
-    height: 100vh;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 75px;
+    font-size: 40px;
+    text-align: center;
+}
+#SCtoptext {
+    display: flex;
+}
+#shopping-cart-image {
+    display: inline-flex;
+    flex-direction: row;
+    align-self: center;
+    padding-left: 10px;
+    height: 40px;
+}
+#shopping-cart-list {
+    margin-top: 20px;
+    width: 70%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    height: 45vh;
 }
 
-#wrapper1text {
-    padding-top: 100px;
-    width: 40%;
-    padding-left: 25px;
+#item1, #item3 {
+    width: 100%;
+    display: flex;
+    background-color: #d0e6cd;
+    height: 15vh;
+    
+}
+#item2 {
+    width: 100%;
+    background-color: #f3f9f2;
+    height: 15vh;
+}
+#belowshoppingcart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    font-size: 20px;
 }
 
+#formunder {
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    flex-grow: 2;
+    margin-bottom: 20px;
+}
+
+#searchbarunder {
+    padding-left: 10px;
+    border: none;
+    background-color: transparent;   
+    outline: none; 
+    width: 100%;
+}
+
+#searchbarunder::placeholder {
+    color: var(--text-color);
+}
+
+#searchbarbuttonunder {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+}
+#searchbarimageunder {
+    cursor: pointer;
+    height: 100%;
+  }
 hr {
     margin-left: 50px;
     margin-right: 50px;

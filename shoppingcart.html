@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/subpages.css">
+
+    <title>Barter Bazaar</title>
+</head>
+<body>
+    <header id="header-home">
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+            <nav>
+            
+            <form action="search.html" id="form">
+                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <button type="submit" id="searchbarbutton"><img id="searchbarimage" src="images/searchbar.png"> </button>
+            </form>
+            <a href="add-item.html" id="additem">Add an item</a>
+            <a href="sign-in.html" id ="signin">sign in</a>  
+            <a href="sign-up.html" id ="signup">sign up</a>
+          
+            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>          
+        </nav>
+    </header>
+    <div id="shopping_cart_wrapper">
+        <p id="SCtoptext"> Your shopping cart<img id="shopping-cart-image"src="images/shopping_cart.png"></p>
+        <div id="shopping-cart-list">
+            <div id="item1">
+                
+            </div>
+            <div id="item2">
+            </div>
+            <div id="item3">
+            </div>
+        </div>
+        <div id="belowshoppingcart">
+            <p>It seems like your shopping cart is empty at the moment</p>
+            <form action="search.html" id="formunder">
+                <input type="text" placeholder="Search for items" id="searchbarunder">
+                <button type="submit" id="searchbarbuttonunder"><img id="searchbarimageunder" src="images/searchbar.png"> </button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="footer-left">
+            <p>© Barter Bazaar B.B. 2023</p>
+            <!-- https://icons8.com/icon/set/logos/fluency-systems-regular -->
+            <img src="images/logo.png">
+    
+        </div>
+        <div class="footer-left">
+            <p>
+                contact us here:
+            </p>
+        </div>
+    </footer>
