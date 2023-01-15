@@ -1,116 +1,7 @@
-:root {
-    --text-color: #0a3104;
-    --text-hover-color: #89c081;
-    --primary-color: #d4e9c6;
-    --secondary-color: #FBFDF2;
-}
-
-* {
-    font-family:  "Poppins";
-    color: var(--text-color);
-    margin: 0px;
-    padding: 0px;
-}
-
-body {
-    background-color: var(--secondary-color);
-}
 
 #home-header {
     background: radial-gradient(var(--secondary-color), var(--primary-color));
-    padding: 10px;
     height: 100vh;
-}
-
-#logo {
-    height: 40px;
-}
-
-nav {
-    width: 90%;
-    float: right;
-    display: inline-flex;
-    column-gap: 25px;
-    height: 40px;
-    align-items: center;
-    justify-content: right;
-}
-#shopping-cart-a {
-    display: flex;
-    height: 100%; 
-}
-
-#search-form {
-    max-width: 300px;
-    border: 1px solid black;
-    border-radius: 18px;
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    flex-grow: 2;
-    padding-left: 10px;
-}
-
-#searchbar {
-    width: 90%;
-    border: none;
-    background-color: transparent;
-    outline: none;
-}
-
-#searchbar::placeholder {
-    color: var(--text-color);
-}
-
-#searchbar-button {
-    background-color: transparent;
-    border: none;
-}
-#searchbar-image {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-#searchbar-image {
-    height: 100%;
-}
-
-#shopping-cart-a {
-    display: flex;
-    height: 100%;
-}
-
-nav a {
-    font-weight: 1000;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    /* Ik weet niet precies wat je hier nog mee wilde doen: */
-    /* min-width: ; */
-}
-
-nav a:hover {
-    text-decoration-color: var(--text-hover-color);
-    color: var(--text-hover-color);
-    transition-duration: 0.5s;
-}
-
-#signup {
-    /* Maybe dit een button maken, zodat ie goed outlinet met de height */
-    padding: 5px;
-    border: 1px solid var(--text-color);
-    border-radius: 8px;
-}
-
-#signup:hover {
-    background-color: #2b7220;
-    border-color: var(--text-hover-color);
-}
-
-h1 {
-    font-family: "Alfa Slab One";
-    font-weight: normal;
-    font-size: 55px;
 }
 
 #home-title {
@@ -132,6 +23,7 @@ h1 {
 }
 
 #wrapper1 {
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
 }
@@ -141,7 +33,7 @@ h1 {
     width: 40%;
 }
 
-#wrapper1buttons {
+/* #wrapper1buttons {
     padding-top: 100px;
     display: flex;
     list-style-type: none;
@@ -162,28 +54,4 @@ h1 {
     height: 150px;
     width: 250px ;
     background-color: var(--primary-color);
-}
-
-footer {
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    padding: 50px;
-}
-
-#footer-left {
-    display: inline-flex;
-    height: 100%;
-    align-items: center;
-}
-
-#footer-right {
-    float: right;
-    display: inline-flex;
-    height: 100%;
-}
-
-#footer-right a {
-    display: flex;
-    height: 100%;
-}
+} */

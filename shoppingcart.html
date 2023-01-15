@@ -5,59 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/subpages.css">
 
     <title>Barter Bazaar</title>
 </head>
 <body>
-    <header id="header-home">
+    <header>
         <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
-            <nav>
-            
-            <form action="search.html" id="form">
+
+        <nav>
+            <form action="search.html" id="search-form">
                 <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
-                <button type="submit" id="searchbarbutton"><img id="searchbarimage" src="images/searchbar.png"> </button>
+                <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
             <a href="add-item.html" id="additem">Add an item</a>
-            <a href="sign-in.html" id ="signin">sign in</a>  
-            <a href="sign-up.html" id ="signup">sign up</a>
-          
-            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>          
+            <a href="sign-in.html" id ="signin">Sign in</a>
+            <a href="sign-up.html" id ="signup">Sign up</a>
+
+            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
         </nav>
     </header>
     <div id="shopping_cart_wrapper">
         <p id="SCtoptext"> Your shopping cart<img id="shopping-cart-image"src="images/shopping_cart.png"></p>
-        <div id="shopping-cart-list">
-            <div id="item1">
-                
+        <div id="shopping-cart-content">
+            <div id="shopping-cart-list">
+                <div id="item1">
+                    <img id="item-image" src="images/items/item1.png" alt="item1">
+                    <div id="item-text">
+                        <div>
+                        <p id="item-title">
+                            Head First Javascript Programming
+                        </p>
+                        <p id="item-description">
+                            Eric Freeman - English - Paperback
+                        </p>
+                        </div>
+                        <p id="item-price">
+                            €7.99
+                        </p>
+                    </div>
+                </div>
+                <hr class="shopping-cart-hr">
+                <div id="item2">
+                    <img id="item-image" src="images/items/item2.png" alt="item2">
+                    <div id="item-text">
+                        <div>
+                        <p id="item-title">
+                            Getting Skilled with Java: Learn Java Programming from Scratch with Realistic Applications and Problem Solving Programmes (English Edition)
+                        </p>
+                        <p id="item-description">
+                            M Rashid Raza - English - E-book
+                        </p>
+                        </div>
+                        <p id="item-price">
+                            €37.99
+                        </p>
+                    </div>
+                    
+                </div>
+                <hr class="shopping-cart-hr">
+                <div id="item3">
+                    <img id="item-image" src="images/items/death_star.jpeg" alt="item3">
+                    <div id="item-text">
+                        <div>
+                        <p id="item-title">
+                            LEGO Star Wars UCS Death Star - 75159                        </p>
+                        <p id="item-description">
+                            LEGO
+                        </p>
+                        </div>
+                        <p id="item-price">
+                            €699.99
+                        </p>
+                    </div>
+                </div>
+                <hr class="shopping-cart-hr">
+                <div id="item4">
+                    <img id="item-image" src="images/items/drone.jpg" alt="drone">
+                    <div id="item-text">
+                        <div>
+                        <p id="item-title">
+                            DJI Mini 2 Fly More Combo
+                        </p>
+                        <p id="item-description">
+                            DJI                        
+                        </p>
+                        </div>
+                        <p id="item-price">
+                            €510.-
+                        </p>
+                    </div>
+                    
+                </div>
+                <hr class="shopping-cart-hr">
+                <div id="item5">
+                    <img id="item-image" src="images/items/dopper.jpg" alt="drone">
+                    <div id="item-text">
+                        <div>
+                        <p id="item-title">
+                            Dopper Original Drinkfles - Moody Mint 450 ml
+                        </p>
+                        <p id="item-description">
+                            dopper
+                        </p>
+                        </div>
+                        <p id="item-price">
+                            €13.45
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div id="item2">
-            </div>
-            <div id="item3">
+            <div id="checkout">
+                <div id="products"><p id="productstext">products:</p><p id="productprice"><b>€1269.42</b></p></div> 
+                <div id="delivery"><p id="deliverytext">delivery fees:</p> <p id="deliveryprice"><b>€4.99</b></p></div> 
+                <hr id="checkout-hr">
+                <div id="total"><p id="totaltext">total:</p><p id="totalprice"><b>€1274.41</b></p></div> 
+                <button id="checkoutbutton">checkout</button>
             </div>
         </div>
         <div id="belowshoppingcart">
-            <p>It seems like your shopping cart is empty at the moment</p>
+            <p>Want to add more items to your shopping cart?</p>
             <form action="search.html" id="formunder">
                 <input type="text" placeholder="Search for items" id="searchbarunder">
                 <button type="submit" id="searchbarbuttonunder"><img id="searchbarimageunder" src="images/searchbar.png"> </button>
             </form>
         </div>
     </div>
-    <hr>
+    <hr id="footer-hr">
     <footer>
-        <div class="footer-left">
-            <p>© Barter Bazaar B.B. 2023</p>
-            <!-- https://icons8.com/icon/set/logos/fluency-systems-regular -->
-            <img src="images/logo.png">
-    
-        </div>
-        <div class="footer-left">
-            <p>
-                contact us here:
-            </p>
+        <p id="footer-left">© Barter Bazaar B.B. 2023</p>
+        <div id="footer-right">
+            <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
         </div>
     </footer>
