@@ -37,7 +37,6 @@ h1 {
 #column-right {
     display: flex;
     width: 300px;
-    gap: 15px;
     flex-direction: column;
 }
 
@@ -116,7 +115,7 @@ textarea {
 }
 
 #add-form button:hover, #image:hover::before {
-    transform: scale(1.1);
+    transform: scale(1.03);
     background-color: var(--button-color);
     color: var(--background-color);
 }

@@ -1,5 +1,4 @@
-#shopping_cart_wrapper {
-
+#shopping-cart-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,32 +6,31 @@
     font-size: 40px;
     text-align: center;
 }
-#SCtoptext {
+
+#shopping-top-text {
     display: flex;
     width: 80%;
     max-width: 1050px;
     font-family: "Alfa Slab One";
     text-align: left;
-
 }
+
 #shopping-cart-image {
     display: inline-flex;
-    flex-direction: row;
     align-self: center;
     padding-left: 10px;
     height: 40px;
 }
+
 #shopping-cart-content {
     width: 80%;
     max-width: 1050px;
     display: flex;
-    flex-direction: row;
     gap: 50px;
     justify-content: center;
 }
 
 #shopping-cart-list {
-
     margin-top: 20px;
     width: 80%;
     border: 5px solid var(--primary-color);
@@ -43,6 +41,7 @@
     overflow-y: scroll;
     height: 500px;
 }
+
 #shopping-cart-list::-webkit-scrollbar {
     width: 10px;
 }
@@ -55,29 +54,29 @@
     background-color: var(--primary-color);
 }
 
+.item {
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    min-height: 150px;
+}
 
-#item1, #item3, #item5 {
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    background-color: #e7f2e6;
-    min-height: 150px;
+.item-dark {
+    background-color: var(--item-color-dark);
 }
-#item2, #item4 {
-    box-sizing: border-box;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    background-color: #f3f9f2;
-    min-height: 150px;
+
+.item-light {
+    background-color: var(--item-color-light);
 }
-#item-image{
+
+.item-image {
     align-content: center;
     height: auto;
     width: 100px;
 }
-#item-text {
+
+.item-text {
     width: 100%;
     height: 100%;
     align-self: start;
@@ -86,69 +85,59 @@
     flex-direction: column;
     justify-content: space-between;
 }
-#item-title {
+
+.item-title {
     text-align: left;
     font-weight: bold;
     font-size: 15px;
     max-height: 69px;
     overflow: hidden;
 }
-#item-description {
+
+.item-description {
     text-align: left;
     font-size: 10px;
 }
-#item-price {
+
+.item-price {
     font-size: 30px;
     font-weight: bold;
     height: fit-content;
     justify-content: flex-end;
     text-align: end;
     justify-self: flex-end;
-
 }
+
 .shopping-cart-hr {
     border-top: 3px solid var(--primary-color);
 }
+
 #checkout {
     padding: 10px;
     font-size: 20px;
     margin-top: 20px;
     width: 300px;
     display: flex;
-    background-color: #d4e9c6;
+    background-color: var(--primary-color);
     flex-direction: column;
     border-radius: 5px;
     height: fit-content;
 }
-#products {
-    font-size: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 
-}
-#delivery {
+.checkout-row {
     font-size: 16px;
     box-sizing: border-box;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 #checkout-hr {
     border-top: 2px solid var(--text-color);
     margin: 5px 0px;
 }
-#total {
-    font-size: 16px;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
 
-}
-
-#checkoutbutton {
+#checkout-button {
     margin-top: 10px;
     background-color: transparent;
     border: 1px solid var(--text-color);
@@ -160,13 +149,13 @@
                 color 0.2s linear;
 }
 
-#checkoutbutton:hover {
+#checkout-button:hover {
     transform: scale(1.03);
     background-color: var(--button-color);
     color: var(--background-color);
 }
 
-#belowshoppingcart {
+#below-shoppingcart {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,7 +164,7 @@
     font-size: 20px;
 }
 
-#formunder {
+#form-under {
     position: relative;
     width: 300px;
     max-width: 300px;
@@ -188,7 +177,7 @@
     padding-left: 20px;
 }
 
-#searchbarunder {
+#searchbar-under {
     height: 40px;
     border: none;
     background-color: transparent;
@@ -201,23 +190,26 @@
     transition: background-size 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
 
-#searchbarunder:focus {
+#searchbar-under:focus {
     background-size: 100% 3px, 100% 1px;
     outline: none;
 }
-#searchbarunder::placeholder {
+
+#searchbar-under::placeholder {
     color: var(--text-color);
 }
 
-#searchbarbuttonunder {
+#searchbar-button-under {
     background-color: transparent;
     border: none;
     height: 100%;
 }
-#searchbarimageunder {
+
+#searchbar-image-under {
     cursor: pointer;
     height: 40px;
 }
+
 #searchbar-span{
     height: 40px;
     position: absolute;

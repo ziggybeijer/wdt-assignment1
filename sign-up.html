@@ -36,147 +36,154 @@
                 </span>
                 <h3>Welcome!</h3>
                 <p>Create a new account below</p>
+
                 <form id="sign-up-form" action="index.html">
-                    <div id="column-left">
-                        <div class="sign-up-div">
-                            <label for="usernameinput">Username</label>
-                            <div class="sign-up-div-div">
-                                <input id="usernameinput" type="text" required="true" class="sign-up-input" name="usernameinput" placeholder="Username">
-                                <span id="usernameicon" class="material-symbols-outlined">
-                                    Account_Circle
-                                </span>
+                    <div id="sign-up-columns">
+
+                        <div class="column">
+                            <div>
+                                <label for="usernameinput">Username</label>
+                                <div class="input-box">
+                                    <input id="usernameinput" type="text" required="true" class="sign-up-input" name="username" placeholder="Username">
+                                    <span class="material-symbols-outlined">
+                                        Account_Circle
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="passwordinput">Password</label>
+                                <div class="input-box">
+                                    <input id="passwordinput" type="password" required="true" class="sign-up-input" name="password" placeholder="Password">
+                                    <span class="material-symbols-outlined">
+                                        lock
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="fullname">Full name</label>
+                                <div class="input-box">
+                                    <input id="fullnameinput" type="text" required="true" class="sign-up-input" name="fullname" placeholder="Full name">
+                                    <span class="material-symbols-outlined">
+                                        badge
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="address">Address</label>
+                                <div class="input-box">
+                                    <input id="addressinput" type="text" required="true" class="sign-up-input" name="address" placeholder="Address">
+                                    <span class="material-symbols-outlined">
+                                        home
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="country">Country</label>
+                                <div class="input-box">
+                                    <input id="countryinput" type="text" required="true" class="sign-up-input" name="country" placeholder="Country">
+                                    <span class="material-symbols-outlined">
+                                        flag
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="gender">Gender</label>
+                                <div class="input-box">
+                                    <select class="sign-up-input" name="gender" id="genderinput">
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <span class="material-symbols-outlined">
+                                        transgender
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="IBAN">IBAN</label>
+                                <div class="input-box">
+                                    <input id="languageinput" type="description" required="true" class="sign-up-input" name="language" placeholder="IBAN">
+                                    <span class="material-symbols-outlined">
+                                        credit_card
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                        <div class="sign-up-div">
-                            <label for="passwordinput">Password</label>
-                            <div class="sign-up-div-div">
-                                <input id="passwordinput" type="password" required="true" class="sign-up-input" name="passwordinput" placeholder="Password">
-                                <span id="passwordicon" class="material-symbols-outlined">
-                                    lock
-                                </span>
+
+                        <div class="column">
+                            <div>
+                                <label for="email">Email</label>
+                                <div class="input-box">
+                                    <input id="emailinput" type="email" required="true" class="sign-up-input" name="email" placeholder="Email">
+                                    <span class="material-symbols-outlined">
+                                        email
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="fullname">Full name</label>
-                            <div class="sign-up-div-div">
-                                <input id="fullnameinput" type="text" required="true" class="sign-up-input" name="fullnameinput" placeholder="Full name">
-                                <span id="fullnameicon" class="material-symbols-outlined">
-                                    badge
-                                </span>
+                            <div>
+                                <label for="rpasswordinput">Repeat password</label>
+                                <div class="input-box">
+                                    <input id="rpasswordinput" type="password" required="true" class="sign-up-input" name="rpassword" placeholder="Repeat password">
+                                    <span class="material-symbols-outlined">
+                                        lock
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="address">Address</label>
-                            <div class="sign-up-div-div">
-                                <input id="addressinput" type="text" required="true" class="sign-up-input" name="addressinput" placeholder="Address">
-                                <span id="addressicon" class="material-symbols-outlined">
-                                    home
-                                </span>
+
+                            <div>
+                                <label for="companyname">Company name (optional)</label>
+                                <div class="input-box">
+                                    <input id="companynameinput" type="text" required="false" class="sign-up-input" name="companyname" placeholder="Company name (optional)">
+                                    <span class="material-symbols-outlined">
+                                        Store
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="country">Country</label>
-                            <div class="sign-up-div-div">
-                                <input id="countryinput" type="text" required="true" class="sign-up-input" name="countryinput" placeholder="Country">
-                                <span id="countryicon" class="material-symbols-outlined">
-                                    flag
-                                </span>
+
+                            <div>
+                                <label for="ZIP-code">ZIP code</label>
+                                <div class="input-box">
+                                    <input id="ZIP-codeinput" type="text" required="true" class="sign-up-input" name="ZIP-code" placeholder="ZIP code">
+                                    <span class="material-symbols-outlined">
+                                        code
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="gender">Gender</label>
-                            <div class="sign-up-div-div">
-                                <select class="sign-up-input" name="genderinput" id="genderinput">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <span id="emailicon" class="material-symbols-outlined">
-                                    transgender
-                                </span>
+                            <div>
+                                <label for="language">Language</label>
+                                <div class="input-box">
+                                    <input id="languageinput" type="text" required="true" class="sign-up-input" name="language" placeholder="Language">
+                                    <span class="material-symbols-outlined">
+                                        flag
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="IBAN">IBAN</label>
-                            <div class="sign-up-div-div">
-                                <input id="languageinput" type="description" required="true" class="sign-up-input" name="languageinput" placeholder="IBAN">
-                                <span id="IBANicon" class="material-symbols-outlined">
-                                    credit_card
-                                </span>
+                            <div>
+                                <label for="phone">Phone number</label>
+                                <div class="input-box">
+                                    <input id="phoneinput" type="tel" required="true" class="sign-up-input" name="phone" placeholder="Phone number">
+                                    <span class="material-symbols-outlined">
+                                        phone
+                                    </span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="bio">About you</label>
+                                <div class="input-box">
+                                    <textarea id="languageinput" type="description" required="true" class="sign-up-input" name="language" placeholder="About you"></textarea>
+                                    <span class="material-symbols-outlined">
+                                        edit
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="column-right">
-                        <div class="sign-up-div">
-                            <label for="email">Email</label>
-                            <div class="sign-up-div-div">
-                                <input id="emailinput" type="email" required="true" class="sign-up-input" name="emailinput" placeholder="Email">
-                                <span id="emailicon" class="material-symbols-outlined">
-                                    email
-                                </span>
-                            </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="rpasswordinput">Repeat password</label>
-                            <div class="sign-up-div-div">
-                                <input id="rpasswordinput" type="password" required="true" class="sign-up-input" name="rpasswordinput" placeholder="Repeat password">
-                                <span id="rpasswordicon" class="material-symbols-outlined">
-                                    lock
-                                </span>
-                            </div>
-                        </div>
 
-                        <div class="sign-up-div">
-                            <label for="companyname">Company name (optional)</label>
-                            <div class="sign-up-div-div">
-                                <input id="companynameinput" type="text" required="false" class="sign-up-input" name="companynameinput" placeholder="Company name (optional)">
-                                <span id="companynameicon" class="material-symbols-outlined">
-                                    Store
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="sign-up-div">
-                            <label for="ZIP-code">ZIP code</label>
-                            <div class="sign-up-div-div">
-                                <input id="ZIP-codeinput" type="text" required="true" class="sign-up-input" name="ZIP-codeinput" placeholder="ZIP code">
-                                <span id="ZIP-codeicon" class="material-symbols-outlined">
-                                    code
-                                </span>
-                            </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="language">Language</label>
-                            <div class="sign-up-div-div">
-                                <input id="languageinput" type="text" required="true" class="sign-up-input" name="languageinput" placeholder="Language">
-                                <span id="languageicon" class="material-symbols-outlined">
-                                    flag
-                                </span>
-                            </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="phone">Phone number</label>
-                            <div class="sign-up-div-div">
-                                <input id="phoneinput" type="tel" required="true" class="sign-up-input" name="phoneinput" placeholder="Phone number">
-                                <span id="phoneicon" class="material-symbols-outlined">
-                                    phone
-                                </span>
-                            </div>
-                        </div>
-                        <div class="sign-up-div">
-                            <label for="bio">About you</label>
-                            <div class="sign-up-div-div">
-                                <textarea id="languageinput" type="description" required="true" class="sign-up-input" name="languageinput" placeholder="About you"></textarea>
-                                <span id="languageicon" class="material-symbols-outlined">
-                                    edit
-                                </span>
-                            </div>
-                        </div>
-
+                    <div>
+                        <hr>
+                        <button type="submit" id="signup-below">Sign up</button>
                     </div>
                 </form>
-                <hr id="sign-up-hr">
-                <a href="index.html" id ="signup-below">Sign up</a>
             </div>
         </div>
 
@@ -192,6 +199,5 @@
             </div>
         </footer>
     </header>
-
 </body>
 </html>

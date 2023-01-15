@@ -20,117 +20,117 @@
                 <input type="text" placeholder="Search..." name="search" id="searchbar">
                 <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
-            <a href="add-item.html" id="additem">Add an item</a>
-            <a href="log-in.html" id ="signin">Log in</a>
+            <a href="add-item.html">Add an item</a>
+            <a href="log-in.html">Log in</a>
             <a href="sign-up.html" id ="signup">Sign up</a>
 
             <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
         </nav>
     </header>
-    <div id="shopping_cart_wrapper">
-        <p id="SCtoptext"> Your shopping cart<img id="shopping-cart-image"src="images/shopping_cart.png"></p>
+    <div id="shopping-cart-wrapper">
+        <p id="shopping-top-text">Your shopping cart<img id="shopping-cart-image"src="images/shopping_cart.png"></p>
         <div id="shopping-cart-content">
             <div id="shopping-cart-list">
-                <div id="item1">
-                    <img id="item-image" src="images/items/item1.png" alt="item1">
-                    <div id="item-text">
+                <div class="item item-dark">
+                    <img class="item-image" src="images/items/item1.png" alt="item1">
+                    <div class="item-text">
                         <div>
-                        <p id="item-title">
+                        <p class="item-title">
                             Head First Javascript Programming
                         </p>
-                        <p id="item-description">
+                        <p class="item-description">
                             Eric Freeman - English - Paperback
                         </p>
                         </div>
-                        <p id="item-price">
+                        <p class="item-price">
                             €7.99
                         </p>
                     </div>
                 </div>
                 <hr class="shopping-cart-hr">
-                <div id="item2">
-                    <img id="item-image" src="images/items/item2.png" alt="item2">
-                    <div id="item-text">
+                <div class="item item-light">
+                    <img class="item-image" src="images/items/item2.png" alt="item2">
+                    <div class="item-text">
                         <div>
-                        <p id="item-title">
+                        <p class="item-title">
                             Getting Skilled with Java: Learn Java Programming from Scratch with Realistic Applications and Problem Solving Programmes (English Edition)
                         </p>
-                        <p id="item-description">
+                        <p class="item-description">
                             M Rashid Raza - English - E-book
                         </p>
                         </div>
-                        <p id="item-price">
+                        <p class="item-price">
                             €37.99
                         </p>
                     </div>
 
                 </div>
                 <hr class="shopping-cart-hr">
-                <div id="item3">
-                    <img id="item-image" src="images/items/death_star.jpeg" alt="item3">
-                    <div id="item-text">
+                <div class="item item-dark">
+                    <img class="item-image" src="images/items/death_star.jpeg" alt="item3">
+                    <div class="item-text">
                         <div>
-                        <p id="item-title">
+                        <p class="item-title">
                             LEGO Star Wars UCS Death Star - 75159                        </p>
-                        <p id="item-description">
+                        <p class="item-description">
                             LEGO
                         </p>
                         </div>
-                        <p id="item-price">
+                        <p class="item-price">
                             €699.99
                         </p>
                     </div>
                 </div>
                 <hr class="shopping-cart-hr">
-                <div id="item4">
-                    <img id="item-image" src="images/items/drone.jpg" alt="drone">
-                    <div id="item-text">
+                <div class="item item-light">
+                    <img class="item-image" src="images/items/drone.jpg" alt="drone">
+                    <div class="item-text">
                         <div>
-                        <p id="item-title">
+                        <p class="item-title">
                             DJI Mini 2 Fly More Combo
                         </p>
-                        <p id="item-description">
+                        <p class="item-description">
                             DJI
                         </p>
                         </div>
-                        <p id="item-price">
+                        <p class="item-price">
                             €510.-
                         </p>
                     </div>
 
                 </div>
                 <hr class="shopping-cart-hr">
-                <div id="item5">
-                    <img id="item-image" src="images/items/dopper.jpg" alt="drone">
-                    <div id="item-text">
+                <div class="item item-dark">
+                    <img class="item-image" src="images/items/dopper.jpg" alt="drone">
+                    <div class="item-text">
                         <div>
-                        <p id="item-title">
+                        <p class="item-title">
                             Dopper Original Drinkfles - Moody Mint 450 ml
                         </p>
-                        <p id="item-description">
+                        <p class="item-description">
                             dopper
                         </p>
                         </div>
-                        <p id="item-price">
+                        <p class="item-price">
                             €13.45
                         </p>
                     </div>
                 </div>
             </div>
             <div id="checkout">
-                <div id="products"><p id="productstext">Products:</p><p id="productprice"><b>€1269.42</b></p></div>
-                <div id="delivery"><p id="deliverytext">Delivery fees:</p> <p id="deliveryprice"><b>€4.99</b></p></div>
+                <div class="checkout-row"><p>Products:</p><p><b>€1269.42</b></p></div>
+                <div class="checkout-row"><p>Delivery fees:</p><p><b>€4.99</b></p></div>
                 <hr id="checkout-hr">
-                <div id="total"><p id="totaltext">Total:</p><p id="totalprice"><b>€1274.41</b></p></div>
-                <button id="checkoutbutton">Checkout</button>
+                <div class="checkout-row"><p>Total:</p><p><b>€1274.41</b></p></div>
+                <button id="checkout-button">Checkout</button>
             </div>
         </div>
-        <div id="belowshoppingcart">
+        <div id="below-shoppingcart">
             <p>Want to add more items to your shopping cart?</p>
-            <form action="search.html" id="formunder">
+            <form action="search.html" id="form-under">
                 <div>
-                    <span id="searchbar-span"><button type="submit" id="searchbarbuttonunder"><img id="searchbarimageunder" src="images/searchbar.png"> </button></span>
-                    <input type="text" placeholder="Search for items" name="search" id="searchbarunder">
+                    <span id="searchbar-span"><button type="submit" id="searchbar-button-under"><img id="searchbar-image-under" src="images/searchbar.png"> </button></span>
+                    <input type="text" placeholder="Search for items" name="search" id="searchbar-under">
                 </div>
             </form>
         </div>
