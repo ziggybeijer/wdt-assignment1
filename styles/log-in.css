@@ -2,14 +2,18 @@ a, button {
     text-decoration: underline;
     text-decoration-color: transparent;
 }
+
 header {
     background: radial-gradient(var(--background-color), var(--primary-color));
     height: 100vh;
+    box-sizing: border-box;
 }
+
 #log-in-wrapper {
     display: flex;
     justify-content: center;
 }
+
 #log-in-content {
     padding: 50px 30px;
     background: radial-gradient(#2B722060, transparent);
@@ -20,22 +24,24 @@ header {
     margin-top: 100px;
     margin-bottom: 100px;
     flex-direction: column;
-
 }
-#loginicon {
+
+#log-in-icon {
     align-self: center;
     margin-bottom: 10px;
     font-size: 50px;
 }
+
 h3 {
     text-align: center;
 }
+
 p {
     text-align: center;
     margin-bottom: 10px;
 }
 
-#log-in-div {
+.log-in-div {
     position: relative;
     padding: 0px 10px;
     display: flex;
@@ -44,11 +50,13 @@ p {
     border-radius: 20px;
     background-color: var(--background-color);
 }
-#usernameicon, #passwordicon{
+
+.icon{
     position: absolute;
     left: 10px;
     color: var(--button-color);
 }
+
 .log-in-input {
     padding: 0 0px 0 20px;
     margin: 0px 10px;
@@ -62,14 +70,16 @@ p {
     background-position: 50% 100%, 50% 100%;
     transition: background-size 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
+
 .log-in-input:focus {
     background-size: 100% 3px, 100% 1px;
     outline: none;
 }
-#log-in-input::placeholder {
-    color: var(--text-color);
 
+.log-in-input::placeholder {
+    color: var(--text-color);
 }
+
 #cb-label {
     display: block;
     position: relative;
@@ -80,9 +90,11 @@ p {
     -ms-user-select: none;
     user-select: none;
 }
+
 #remember-cb {
     display: none;
 }
+
 #checkbox {
     position: absolute;
     top: 5px;
@@ -93,17 +105,20 @@ p {
     border: 3px solid var(--button-color);
     border-radius: 3px;
     transition: transform 0.1s linear;
-
 }
+
 #cb-label:hover #checkbox{
     background-color: var(--background-color);
 }
+
 #cb-label:active #checkbox {
     transform: scale(1.2);
 }
+
 #remember-cb:checked ~ #checkbox {
     background-color: var(--background-color);
 }
+
 #checkbox:before {
     content: "";
     position: absolute;
@@ -113,9 +128,11 @@ p {
     width: 10px;
     border: none;
 }
+
 #remember-cb:checked ~ #checkbox:before {
     display: block;
 }
+
 #cb-label #checkbox:before {
     left: 2px;
     top: 1px;
@@ -126,15 +143,16 @@ p {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
+
 #log-in-form {
     background-color: transparent;
     display: flex;
     gap: 15px;
     flex-direction: column;
 }
-#log-in-button {
 
+#log-in-button {
     padding: 7px;
     color: var(--background-color);
     background-color: var(--button-color);
@@ -145,8 +163,7 @@ p {
     transition: transform 0.2s linear,
                 text-decoration-color 0.2s linear,
                 color 0.2s linear,
-                background-color 0.2s linear
-                ;
+                background-color 0.2s linear;
 }
 
 #log-in-button:hover {
@@ -155,11 +172,12 @@ p {
     transform: scale(1.1);
 }
 
-hr {
+#log-in-hr {
     margin-top: 20px;
-    border: 1px solid var(--button-color);
+    border: 1px solid var(--text-color);
     margin-bottom: 10px;
 }
+
 #signup-below {
     text-align: center;
     height: 100%;
@@ -171,7 +189,6 @@ hr {
                 background-color 0.2s linear,
                 color 0.2s linear,
                 text-decoration-color 0.2s linear;
-
 }
 
 #signup-below:hover {

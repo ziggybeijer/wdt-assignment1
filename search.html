@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/search.css">
-
-    <title>Barter Bazaar</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Search - Barter Bazaar</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
 
         <nav>
             <form action="search.html" id="search-form">
-                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <input type="text" placeholder="Search..." name="search" id="searchbar">
                 <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
             <a href="add-item.html" id="additem">Add an item</a>
@@ -28,7 +28,7 @@
         </nav>
     </header>
 
-    <!-- TODO Add seller name / company name -->
+    <h1>3 items found</h1>
     <div id="wrapper">
         <form action="search.html" id="filter">
             <div>
@@ -37,11 +37,15 @@
             </div>
             <div>
                 <label for="min-price">Minimum price</label>
-                <input type="number" placeholder="0" min="0" step="0.01" id="min-price" name="min-price">
+                <input type="number" min="0" step="0.01" id="min-price" name="min-price">
             </div>
             <div>
                 <label for="max-price">Maximum price</label>
-                <input type="number" placeholder="100" min="0" step="0.01" id="max-price" name="max-price">
+                <input type="number" min="0" step="0.01" id="max-price" name="max-price">
+            </div>
+            <div>
+                <label for="name">Seller/company name</label>
+                <input type="text" id="name" name="name">
             </div>
             <div>
                 <label for="category">Category</label>
@@ -49,7 +53,7 @@
             </div>
             <div>
                 <label for="min-rating">Minimum rating</label>
-                <input type="number" placeholder="0" min="0" max="5" step="0.1" id="min-rating" name="min-rating">
+                <input type="number" min="0" max="5" step="0.1" id="min-rating" name="min-rating">
             </div>
             <button type="submit">Filter items</button>
         </form>

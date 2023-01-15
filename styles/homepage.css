@@ -1,57 +1,26 @@
+header {
+    background-color: transparent;
+}
 
-#home-header {
+body {
+    display: flex;
+    flex-direction: column;
     background: radial-gradient(var(--background-color), var(--primary-color));
     height: 100vh;
 }
 
-#home-title {
-    margin-left: 100px;
-    margin-top: 350px;
-}
-
-#home-subtitle {
-    margin-left: 100px;
-    margin-top: 25px;
-    font-size: 26px;
-}
-
-#home-image {
-    left: 600px;
-    position: relative;
-    width: 150px;
-    bottom: 250px;
-}
-
-#wrapper1 {
-    height: 100vh;
+#wrapper {
+    padding: 20px 50px 20px 100px;
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    column-gap: 100px;
 }
 
-#wrapper1 p {
-    margin: 100px 0px;
-    width: 40%;
+#wrapper img {
+    max-width: 150px;
 }
 
-/* #wrapper1buttons {
-    padding-top: 100px;
-    display: flex;
-    list-style-type: none;
-    flex-direction: column;
-    justify-items: center ;
-    gap: 100px;
+#wrapper p {
+    max-width: 700px;
 }
-
-#wrapper1buttons button {
-    cursor: pointer;
-    font-family: "Alfa Slab One";
-    font-weight: lighter;
-    font-size: 40px;
-    border: none;
-    border-radius: 25px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height: 150px;
-    width: 250px ;
-    background-color: var(--primary-color);
-} */

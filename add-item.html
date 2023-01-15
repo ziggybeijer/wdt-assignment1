@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/add-item.css">
-
-    <title>Add an item - Marketplace</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Add an item - Barter Bazaar</title>
 </head>
 <body>
     <header>
@@ -17,7 +17,7 @@
 
         <nav>
             <form action="search.html" id="search-form">
-                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <input type="text" placeholder="Search..." name="search" id="searchbar">
                 <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
             <a href="add-item.html" id="additem">Add an item</a>
@@ -30,35 +30,39 @@
 
     <div id="wrapper">
         <h1>Add an item</h1>
-        <form action="add-item.html" method="post" id="add-form">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" required="true" id="name" name="name">
+        <form action="index.html" method="post" id="add-form">
+            <div id="userinput">
+                <div id="column-left">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" required="true" id="name" name="name">
+                    </div>
+                    <div>
+                        <label for="quantity">Quantity</label>
+                        <input type="number" required="true" min="1" id="quantity" name="quantity">
+                    </div>
+                    <div>
+                        <label for="price">Price per item</label>
+                        <input type="number" required="true" min="0" step="0.01" id="price" name="price">
+                    </div>
+                    <div>
+                        <label for="category">Category</label>
+                        <input type="text" required="true" id="category" name="category">
+                    </div>
+                    <div id="imagediv">
+                        <p>Image</p>
+                        <input type="file" required="true" accept="image/*" id="image" name="image">
+                    </div>
+                </div>
+                <div id="column-right">
+                    <label for="description">Description</label>
+                    <textarea id="description" required="true" name="description"></textarea>
+                </div>
             </div>
-            <div>
-                <p>Image</p>
-                <!-- <label for="image" id="image-label">Click here to choose an image</label> -->
-                <input type="file" required="true" accept="image/*" id="image" name="image">
-            </div>
-            <div>
-                <label for="description">Description</label>
-                <textarea id="description" required="true" name="description"></textarea>
-            </div>
-            <div>
-                <label for="quantity">Quantity</label>
-                <input type="number" required="true" min="1" id="quantity" name="quantity">
-            </div>
-            <div>
-                <label for="price">Price per item</label>
-                <input type="number" required="true" min="0" step="0.01" id="price" name="price">
-            </div>
-            <div>
-                <label for="category">Category</label>
-                <input type="text" required="true" id="category" name="category">
-            </div>
-            <button id="submit-button" type="submit">Add the item</button>
-
+            <button  id="submit-button" type="submit">Add the item</button>
         </form>
+
+
     </div>
 
     <hr id="footer-hr">

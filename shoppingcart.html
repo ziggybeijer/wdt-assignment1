@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/subpages.css">
-    <title>Barter Bazaar</title>
+    <link rel="stylesheet" href="styles/shoppingcart.css">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Shopping cart - Barter Bazaar</title>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
 
         <nav>
             <form action="search.html" id="search-form">
-                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <input type="text" placeholder="Search..." name="search" id="searchbar">
                 <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
             <a href="add-item.html" id="additem">Add an item</a>
@@ -62,7 +63,7 @@
                             €37.99
                         </p>
                     </div>
-                    
+
                 </div>
                 <hr class="shopping-cart-hr">
                 <div id="item3">
@@ -89,14 +90,14 @@
                             DJI Mini 2 Fly More Combo
                         </p>
                         <p id="item-description">
-                            DJI                        
+                            DJI
                         </p>
                         </div>
                         <p id="item-price">
                             €510.-
                         </p>
                     </div>
-                    
+
                 </div>
                 <hr class="shopping-cart-hr">
                 <div id="item5">
@@ -117,18 +118,20 @@
                 </div>
             </div>
             <div id="checkout">
-                <div id="products"><p id="productstext">products:</p><p id="productprice"><b>€1269.42</b></p></div> 
-                <div id="delivery"><p id="deliverytext">delivery fees:</p> <p id="deliveryprice"><b>€4.99</b></p></div> 
+                <div id="products"><p id="productstext">Products:</p><p id="productprice"><b>€1269.42</b></p></div>
+                <div id="delivery"><p id="deliverytext">Delivery fees:</p> <p id="deliveryprice"><b>€4.99</b></p></div>
                 <hr id="checkout-hr">
-                <div id="total"><p id="totaltext">total:</p><p id="totalprice"><b>€1274.41</b></p></div> 
-                <button id="checkoutbutton">checkout</button>
+                <div id="total"><p id="totaltext">Total:</p><p id="totalprice"><b>€1274.41</b></p></div>
+                <button id="checkoutbutton">Checkout</button>
             </div>
         </div>
         <div id="belowshoppingcart">
             <p>Want to add more items to your shopping cart?</p>
             <form action="search.html" id="formunder">
-                <input type="text" placeholder="Search for items" id="searchbarunder">
-                <button type="submit" id="searchbarbuttonunder"><img id="searchbarimageunder" src="images/searchbar.png"> </button>
+                <div>
+                    <span id="searchbar-span"><button type="submit" id="searchbarbuttonunder"><img id="searchbarimageunder" src="images/searchbar.png"> </button></span>
+                    <input type="text" placeholder="Search for items" name="search" id="searchbarunder">
+                </div>
             </form>
         </div>
     </div>

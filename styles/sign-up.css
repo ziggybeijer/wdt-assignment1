@@ -101,29 +101,6 @@ p {
     color: var(--text-color);
 }
 
-
-#sign-up-button {
-
-    padding: 7px;
-    color: var(--background-color);
-    background-color: var(--button-color);
-    border: 2px solid var(--text-color);
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.2s linear,
-                text-decoration-color 0.2s linear,
-                color 0.2s linear,
-                background-color 0.2s linear
-                ;
-}
-
-#sign-up-button:hover {
-    background-color: #225b1a;
-    text-decoration-color: var(--background-color);
-    transform: scale(1.00);
-}
-
 hr {
     margin-top: 20px;
     border: 1px solid var(--button-color);
@@ -147,8 +124,14 @@ hr {
     text-decoration-color: var(--background-color);
     background-color: var(--button-color);
     color: var(--background-color);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 label {
     padding-left: 10px;
+}
+textarea {
+    min-height: 40px;
+    resize: vertical;
+
+
 }

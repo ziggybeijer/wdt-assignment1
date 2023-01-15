@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="styles/log-in.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>log in</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>Log in - Barter Bazaar</title>
 </head>
 <body>
     <header>
@@ -18,45 +19,48 @@
 
         <nav>
             <form action="search.html" id="search-form">
-                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <input type="text" placeholder="Search..." name="search" id="searchbar">
                 <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
             </form>
-            <a href="add-item.html" id="additem">Add an item</a>
-            <a href="log-in.html" id ="login">Log in</a>
+            <a href="add-item.html">Add an item</a>
+            <a href="log-in.html">Log in</a>
             <a href="sign-up.html" id ="signup">Sign up</a>
 
             <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
         </nav>
+
         <div id="log-in-wrapper">
             <div id="log-in-content">
-                <span id="loginicon" class="material-symbols-outlined">
+                <span id="log-in-icon" class="material-symbols-outlined">
                     login
                 </span>
                 <h3>Welcome!</h3>
                 <p>Log in to your account</p>
-                <form id="log-in-form" action="index.html" method="post">
-                    <div id="log-in-div">
 
+                <form id="log-in-form" action="index.html" method="post">
+                    <div class="log-in-div">
                         <input type="text" required="true" class="log-in-input" name="username" placeholder="Username">
-                        <span id="usernameicon" class="material-symbols-outlined">
-                            Account_Circle
-                            </span>
+                        <span class="icon material-symbols-outlined">
+                            account_circle
+                        </span>
                     </div>
-                    <div id="log-in-div">
-                        <span id="passwordicon" class="material-symbols-outlined">
+
+                    <div class="log-in-div">
+                        <span class="icon material-symbols-outlined">
                             lock
                         </span>
                         <input type="password" required="true" class="log-in-input" name="password" placeholder="Password">
-
                     </div>
+
                     <label id="cb-label">
-                        remember me?
+                        Remember me?
                         <input type="checkbox" name="remember-cb" id="remember-cb" >
                         <span id="checkbox"></span>
                     </label>
-                    <button type="submit" id="log-in-button" >log in</button>
+                    <button type="submit" id="log-in-button" >Log in</button>
                 </form>
-                <hr id="login-hr">
+
+                <hr id="log-in-hr">
                 <p>Dont have a account?</p>
                 <a href="sign-up.html" id ="signup-below">Sign up</a>
             </div>
