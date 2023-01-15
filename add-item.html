@@ -4,31 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
     <title>Add item - Marketplace</title>
 </head>
 <body>
+    <header>
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+
+        <nav>
+            <form action="search.html" id="search-form">
+                <input type="text" placeholder="Search..." name="searchbar" id="searchbar">
+                <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
+            </form>
+            <a href="add-item.html" id="additem">Add an item</a>
+            <a href="log-in.html" id ="signin">Log in</a>
+            <a href="sign-up.html" id ="signup">Sign up</a>
+
+            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
+        </nav>
+    </header>
+
     <h1>Add items</h1>
     <form action="index.html" method="post">
         <label for="name">Name</label><br>
         <input type="text" required="true" id="name" name="name"><br><br>
-        
+
         <label for="description">Description</label><br>
         <textarea id="description" required="true" name="description"></textarea><br><br>
-        
+
         <label for="quantity">Quantity</label><br>
         <input type="number" required="true" min="1" id="quantity" name="quantity"><br><br>
-        
+
         <label for="price">Price per item</label><br>
         <input type="number" required="true" min="0" step="0.01" id="price" name="price"><br><br>
-        
+
         <!-- Choose from menu -->
         <label for="category">Category</label><br>
         <input type="text" required="true" id="category" name="category"><br><br>
-        
+
         <button type="submit">add itme!</button>
 
     </form>
     <br><br><br>
-    <a href="index.html"><button>home</button></a>  
+    <a href="index.html"><button>home</button></a>
+
+    <hr id="footer-hr">
+    <footer>
+        <p id="footer-left">© Barter Bazaar B.B. 2023</p>
+        <div id="footer-right">
+            <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
+        </div>
+    </footer>
 </body>
 </html>
