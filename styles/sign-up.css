@@ -2,14 +2,17 @@ a, button {
     text-decoration: underline;
     text-decoration-color: transparent;
 }
+
 header {
     background: radial-gradient(var(--background-color), var(--primary-color));
     height: fit-content;
 }
+
 #sign-up-wrapper {
     display: flex;
     justify-content: center;
 }
+
 #sign-up-content {
     padding: 50px 30px;
     background: radial-gradient(#2B722060, transparent);
@@ -21,15 +24,12 @@ header {
     margin-top: 100px;
     margin-bottom: 100px;
     flex-direction: column;
-
-
 }
 
 #sign-up-form {
     background-color: transparent;
     display: flex;
     gap: 25px;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -46,24 +46,29 @@ header {
     gap: 15px;
     flex-direction: column;
 }
-#signupicon {
+
+#sign-up-icon {
     align-self: center;
     margin-bottom: 10px;
     font-size: 50px;
 }
+
 h3 {
     text-align: center;
 }
+
 p {
     text-align: center;
     margin-bottom: 10px;
 }
+
 .sign-up-div {
     display: flex;
     flex-direction: column;
     height: fit-content;
     margin-bottom: 10px;
 }
+
 .sign-up-div-div {
     position: relative;
     padding: 0px 10px;
@@ -73,6 +78,7 @@ p {
     border-radius: 20px;
     background-color: var(--background-color);
 }
+
 .material-symbols-outlined:not(#signupicon) {
     top: 8px;
     position: absolute;
