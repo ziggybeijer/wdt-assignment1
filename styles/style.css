@@ -4,7 +4,7 @@
     --text-color: #0A3104;
     --text-hover-color: #89C081;
     --primary-color: #D4E9C6;
-    --secondary-color: #FBFDF2;
+    --background-color: #FBFDF2;
     --button-color: #2B7220;
     --item-color-light: #f3f9f2;
     --item-color-dark: #e7f2e6;
@@ -19,8 +19,8 @@
 }
 
 body {
-   
-    background-color: var(--secondary-color);
+
+    background-color: var(--background-color);
 }
 
 header {
@@ -77,7 +77,7 @@ nav {
 
 #shopping-cart-a {
     display: flex;
-    height: 100%; 
+    height: 100%;
 }
 
 nav a {
@@ -93,7 +93,7 @@ nav a:hover {
 }
 
 #signup {
-    
+
     height: 100%;
     box-sizing: border-box;
     padding: 7px;
@@ -103,7 +103,8 @@ nav a:hover {
 
 #signup:hover {
     background-color: var(--button-color);
-    border-color: var(--text-hover-color);
+    color: var(--background-color);
+    text-decoration-color: var(--background-color);
 }
 
 h1 {

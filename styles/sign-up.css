@@ -4,25 +4,49 @@ a, button {
 }
 header {
     background: radial-gradient(var(--background-color), var(--primary-color));
-    height: 100vh;
+    height: fit-content;
 }
-#log-in-wrapper {
+#sign-up-wrapper {
     display: flex;
     justify-content: center;
 }
-#log-in-content {
+#sign-up-content {
     padding: 50px 30px;
     background: radial-gradient(#2B722060, transparent);
     box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.74);
     border-radius: 20px;
+    gap: 25px;
     display: flex;
-    width: 300px;
+    width: 600px;
     margin-top: 100px;
     margin-bottom: 100px;
     flex-direction: column;
 
+
 }
-#loginicon {
+
+#sign-up-form {
+    background-color: transparent;
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#column-left {
+    display: flex;
+    width: 300px;
+    gap: 15px;
+    flex-direction: column;
+}
+
+#column-right {
+    display: flex;
+    width: 300px;
+    gap: 15px;
+    flex-direction: column;
+}
+#signupicon {
     align-self: center;
     margin-bottom: 10px;
     font-size: 50px;
@@ -34,8 +58,13 @@ p {
     text-align: center;
     margin-bottom: 10px;
 }
-
-#log-in-div {
+.sign-up-div {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+.sign-up-div-div {
     position: relative;
     padding: 0px 10px;
     display: flex;
@@ -44,12 +73,14 @@ p {
     border-radius: 20px;
     background-color: var(--background-color);
 }
-#usernameicon, #passwordicon{
+.material-symbols-outlined:not(#signupicon) {
+    top: 8px;
     position: absolute;
     left: 10px;
     color: var(--button-color);
 }
-.log-in-input {
+.sign-up-input {
+    font-size: 16px;
     padding: 0 0px 0 20px;
     margin: 0px 10px;
     border: none;
@@ -62,78 +93,16 @@ p {
     background-position: 50% 100%, 50% 100%;
     transition: background-size 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
 }
-.log-in-input:focus {
+.sign-up-input:focus {
     background-size: 100% 3px, 100% 1px;
     outline: none;
 }
-#log-in-input::placeholder {
+#sign-up-input::placeholder {
     color: var(--text-color);
+}
 
-}
-#cb-label {
-    display: block;
-    position: relative;
-    padding-left: 20px;
-    width: fit-content;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-#remember-cb {
-    display: none;
-}
-#checkbox {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    height: 10px;
-    width: 10px;
-    background-color: transparent;
-    border: 3px solid var(--button-color);
-    border-radius: 3px;
-    transition: transform 0.1s linear;
 
-}
-#cb-label:hover #checkbox{
-    background-color: var(--background-color);
-}
-#cb-label:active #checkbox {
-    transform: scale(1.2);
-}
-#remember-cb:checked ~ #checkbox {
-    background-color: var(--background-color);
-}
-#checkbox:before {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 0;
-    height: 10px;
-    width: 10px;
-    border: none;
-}
-#remember-cb:checked ~ #checkbox:before {
-    display: block;
-}
-#cb-label #checkbox:before {
-    left: 2px;
-    top: 1px;
-    height: 3px;
-    width: 3px;
-    border: solid var(--button-color);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-#log-in-form {
-    background-color: transparent;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-}
-#log-in-button {
+#sign-up-button {
 
     padding: 7px;
     color: var(--background-color);
@@ -149,10 +118,10 @@ p {
                 ;
 }
 
-#log-in-button:hover {
+#sign-up-button:hover {
     background-color: #225b1a;
     text-decoration-color: var(--background-color);
-    transform: scale(1.1);
+    transform: scale(1.00);
 }
 
 hr {
@@ -179,4 +148,7 @@ hr {
     background-color: var(--button-color);
     color: var(--background-color);
     transform: scale(1.1);
+}
+label {
+    padding-left: 10px;
 }

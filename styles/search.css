@@ -17,7 +17,7 @@
 }
 
 #filter input {
-    background-color: var(--secondary-color);
+    background-color: var(--background-color);
     border-radius: 5px;
     border: 1px solid var(--text-color);
     font-size: 14px;
@@ -33,7 +33,7 @@
     margin: 0;
 }
 
-#filter input[type=number]{
+#filter input[type=number] {
     -moz-appearance: textfield;
 }
 
@@ -48,7 +48,7 @@
 
 #filter button:hover {
     background-color: var(--button-color);
-    color: var(--secondary-color);
+    color: var(--background-color);
     transition-duration: 0.5s;
 }
 

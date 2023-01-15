@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/add-item.css">
 
-    <title>Add item - Marketplace</title>
+    <title>Add an item - Marketplace</title>
 </head>
 <body>
     <header>
@@ -25,29 +28,38 @@
         </nav>
     </header>
 
-    <h1>Add items</h1>
-    <form action="index.html" method="post">
-        <label for="name">Name</label><br>
-        <input type="text" required="true" id="name" name="name"><br><br>
+    <div id="wrapper">
+        <h1>Add an item</h1>
+        <form action="add-item.html" method="post" id="add-form">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" required="true" id="name" name="name">
+            </div>
+            <div>
+                <p>Image</p>
+                <!-- <label for="image" id="image-label">Click here to choose an image</label> -->
+                <input type="file" required="true" accept="image/*" id="image" name="image">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" required="true" name="description"></textarea>
+            </div>
+            <div>
+                <label for="quantity">Quantity</label>
+                <input type="number" required="true" min="1" id="quantity" name="quantity">
+            </div>
+            <div>
+                <label for="price">Price per item</label>
+                <input type="number" required="true" min="0" step="0.01" id="price" name="price">
+            </div>
+            <div>
+                <label for="category">Category</label>
+                <input type="text" required="true" id="category" name="category">
+            </div>
+            <button id="submit-button" type="submit">Add the item</button>
 
-        <label for="description">Description</label><br>
-        <textarea id="description" required="true" name="description"></textarea><br><br>
-
-        <label for="quantity">Quantity</label><br>
-        <input type="number" required="true" min="1" id="quantity" name="quantity"><br><br>
-
-        <label for="price">Price per item</label><br>
-        <input type="number" required="true" min="0" step="0.01" id="price" name="price"><br><br>
-
-        <!-- Choose from menu -->
-        <label for="category">Category</label><br>
-        <input type="text" required="true" id="category" name="category"><br><br>
-
-        <button type="submit">add itme!</button>
-
-    </form>
-    <br><br><br>
-    <a href="index.html"><button>home</button></a>
+        </form>
+    </div>
 
     <hr id="footer-hr">
     <footer>
