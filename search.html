@@ -1,109 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/search.css">
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
-    <title>Search - Barter Bazaar</title>
-</head>
-<body>
-    <header>
-        <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" >
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/search.css">
+        <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+        <title>Search - Barter Bazaar</title>
+    </head>
 
-        <nav>
-            <form action="search.html" id="search-form">
-                <input type="text" placeholder="Search..." name="search" id="searchbar">
-                <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
+    <body>
+        <header>
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+
+            <nav>
+                <form action="search.html" id="search-form">
+                    <input type="text" placeholder="Search..." name="search" id="searchbar">
+                    <button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
+                </form>
+                <a href="add-item.html">Add an item</a>
+                <a href="log-in.html" >Log in</a>
+                <a href="sign-up.html" id ="signup">Sign up</a>
+
+                <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
+            </nav>
+        </header>
+
+        <h1>3 items found</h1>
+        <div id="wrapper">
+            <form action="search.html" id="filter">
+                <div>
+                    <label for="search">Search</label>
+                    <input type="text" placeholder="Search..." id="search" name="search">
+                </div>
+                <div>
+                    <label for="min-price">Minimum price</label>
+                    <input type="number" min="0" step="0.01" id="min-price" name="min-price">
+                </div>
+                <div>
+                    <label for="max-price">Maximum price</label>
+                    <input type="number" min="0" step="0.01" id="max-price" name="max-price">
+                </div>
+                <div>
+                    <label for="name">Seller/company name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category">
+                </div>
+                <div>
+                    <label for="min-rating">Minimum rating</label>
+                    <input type="number" min="0" max="5" step="0.1" id="min-rating" name="min-rating">
+                </div>
+                <button type="submit">Filter items</button>
             </form>
-            <a href="add-item.html">Add an item</a>
-            <a href="log-in.html" >Log in</a>
-            <a href="sign-up.html" id ="signup">Sign up</a>
 
-            <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
-        </nav>
-    </header>
-
-    <h1>3 items found</h1>
-    <div id="wrapper">
-        <form action="search.html" id="filter">
-            <div>
-                <label for="search">Search</label>
-                <input type="text" placeholder="Search..." id="search" name="search">
-            </div>
-            <div>
-                <label for="min-price">Minimum price</label>
-                <input type="number" min="0" step="0.01" id="min-price" name="min-price">
-            </div>
-            <div>
-                <label for="max-price">Maximum price</label>
-                <input type="number" min="0" step="0.01" id="max-price" name="max-price">
-            </div>
-            <div>
-                <label for="name">Seller/company name</label>
-                <input type="text" id="name" name="name">
-            </div>
-            <div>
-                <label for="category">Category</label>
-                <input type="text" id="category" name="category">
-            </div>
-            <div>
-                <label for="min-rating">Minimum rating</label>
-                <input type="number" min="0" max="5" step="0.1" id="min-rating" name="min-rating">
-            </div>
-            <button type="submit">Filter items</button>
-        </form>
-
-        <div id="items">
-            <div class="item item-dark">
-                <div class="details">
-                    <img src="images/items/death_star.jpeg" alt="LEGO Star Wars Death Destroyer">
-                    <div>
-                        <h2>LEGO Star Wars Death Destroyer</h2>
-                        <p>Category: Toys | Rating: 4.8/5</p>
-                        <p>Only a few pieces are missing :)</p>
+            <div id="items">
+                <div class="item item-dark">
+                    <div class="details">
+                        <img src="images/items/death_star.jpeg" alt="LEGO Star Wars Death Destroyer">
+                        <div>
+                            <h2>LEGO Star Wars Death Destroyer</h2>
+                            <p>Category: Toys | Rating: 4.8/5</p>
+                            <p>Only a few pieces are missing :)</p>
+                        </div>
                     </div>
+                    <p class="price">€699.99</p>
                 </div>
-                <p class="price">€699.99</p>
-            </div>
-            <div class="item item-light">
-                <div class="details">
-                    <img src="images/items/vr.png" alt="VR Headset">
-                    <div>
-                        <h2>VR Headset</h2>
-                        <p>Category: Electronics | Rating: 0/5</p>
-                        <p>Very ligitimate vr headset</p>
+                <div class="item item-light">
+                    <div class="details">
+                        <img src="images/items/vr.png" alt="VR Headset">
+                        <div>
+                            <h2>VR Headset</h2>
+                            <p>Category: Electronics | Rating: 0/5</p>
+                            <p>Very ligitimate vr headset</p>
+                        </div>
                     </div>
+                    <p class="price">€0.99</p>
                 </div>
-                <p class="price">€0.99</p>
-            </div>
-            <div class="item item-dark">
-                <div class="details">
-                    <img src="images/items/item1.png" alt="Head First Javascript Programming">
-                    <div>
-                        <h2>Head First Javascript Programming</h2>
-                        <p>Category: Books | Rating: 3.2/5</p>
-                        <p>A Brain-Friendly Guide</p>
+                <div class="item item-dark">
+                    <div class="details">
+                        <img src="images/items/item1.png" alt="Head First Javascript Programming">
+                        <div>
+                            <h2>Head First Javascript Programming</h2>
+                            <p>Category: Books | Rating: 3.2/5</p>
+                            <p>A Brain-Friendly Guide</p>
+                        </div>
                     </div>
+                    <p class="price">€37.99</p>
                 </div>
-                <p class="price">€37.99</p>
             </div>
         </div>
-    </div>
 
-    <hr id="footer-hr">
-    <footer>
-        <p id="footer-left">© Barter Bazaar B.B. 2023</p>
-        <div id="footer-right">
-            <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
-            <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
-            <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
-        </div>
-    </footer>
-</body>
+        <hr id="footer-hr">
+        <footer>
+            <p id="footer-left">© Barter Bazaar B.B. 2023</p>
+            <div id="footer-right">
+                <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
+                <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
+            </div>
+        </footer>
+    </body>
+</html>

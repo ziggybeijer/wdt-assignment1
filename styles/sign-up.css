@@ -114,7 +114,9 @@ label {
     color: var(--text-color);
 }
 
-textarea {
+#bio {
+    box-sizing: border-box;
+    padding-top: 7px;
     min-height: 40px;
     resize: vertical;
 }
