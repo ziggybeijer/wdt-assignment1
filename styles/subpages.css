@@ -1,6 +1,7 @@
 
 
 #shopping_cart_wrapper {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,8 +10,12 @@
     text-align: center;
 }
 #SCtoptext {
-    font-family: "Alfa Slab One";
     display: flex;
+    width: 80%;
+    max-width: 1050px;
+    font-family: "Alfa Slab One";
+    text-align: left;
+
 }
 #shopping-cart-image {
     display: inline-flex;
@@ -21,7 +26,7 @@
 }
 #shopping-cart-content {
     width: 80%;
-
+    max-width: 1050px;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -41,7 +46,6 @@
     height: 500px;
 }
 #shopping-cart-list::-webkit-scrollbar {
-    
     width: 10px;
 }
 
