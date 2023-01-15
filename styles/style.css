@@ -19,6 +19,7 @@
 }
 
 body {
+   
     background-color: var(--secondary-color);
 }
 
@@ -45,7 +46,7 @@ nav {
 #search-form {
     max-width: 300px;
     border: 1px solid black;
-    border-radius: 18px;
+    border-radius: 20px;
     box-sizing: border-box;
     display: flex;
     height: 100%;
@@ -92,11 +93,12 @@ nav a:hover {
 }
 
 #signup {
+    
     height: 100%;
     box-sizing: border-box;
     padding: 7px;
     border: 1px solid var(--text-color);
-    border-radius: 18px;
+    border-radius: 20px;
 }
 
 #signup:hover {
