@@ -74,6 +74,10 @@ p {
     position: relative;
     padding-left: 20px;
     width: fit-content;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
 #remember-cb {
     display: none;
