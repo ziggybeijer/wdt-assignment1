@@ -41,6 +41,8 @@ nav {
 }
 
 #search-form {
+    box-sizing: border-box;
+    position: relative;
     max-width: 300px;
     border: 1px solid black;
     border-radius: 20px;
@@ -48,11 +50,18 @@ nav {
     display: flex;
     height: 100%;
     flex-grow: 1;
-    padding-left: 20px;
-}
 
+}
+#search-form div {
+    width: 100%;
+}
 #searchbar {
-    width: calc(100% - 20px);
+    box-sizing: border-box;
+    height: 40px;
+    width: calc(100% - 40px);
+    padding-right: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
     border: none;
     background-color: transparent;
     outline: none;
@@ -72,18 +81,21 @@ nav {
 }
 
 #searchbar-button {
-    position: absolute;
-    height: 40px;
-    right: 415px;
+    
     background-color: transparent;
     border: none;
-    cursor: pointer;
-}
-
-#searchbar-image {
     height: 100%;
 }
 
+#searchbar-image {
+    cursor: pointer;
+    height: 40px;
+}
+#searchbar-span{
+    height: 40px;
+    position: absolute;
+    right: 0px;
+}
 #shopping-cart-a {
     display: flex;
     height: 100%;
