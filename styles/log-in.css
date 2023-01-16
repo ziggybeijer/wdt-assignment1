@@ -2,11 +2,16 @@ a, button {
     text-decoration: underline;
     text-decoration-color: transparent;
 }
-
-header {
+html {
     background: radial-gradient(var(--background-color), var(--primary-color));
+}
+body {
+    background-color: transparent;
+}
+header {
     height: 100vh;
     box-sizing: border-box;
+    background-color: transparent;
 }
 
 #log-in-wrapper {
