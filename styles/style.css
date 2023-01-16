@@ -99,6 +99,7 @@ nav {
 #shopping-cart-a {
     display: flex;
     height: 100%;
+    width: 40px;
 }
 
 nav a {
