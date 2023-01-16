@@ -2,10 +2,17 @@ a, button {
     text-decoration: underline;
     text-decoration-color: transparent;
 }
+html {
+    background: radial-gradient(var(--background-color), var(--primary-color));
+}
+body {
+    background-color: transparent;
+}
 
 header {
-    background: radial-gradient(var(--background-color), var(--primary-color));
     height: fit-content;
+    box-sizing: border-box;
+    background-color: transparent;
 }
 
 #sign-up-wrapper {
