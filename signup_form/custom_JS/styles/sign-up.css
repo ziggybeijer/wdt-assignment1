@@ -1,0 +1,158 @@
+a, button {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+}
+html {
+    background: radial-gradient(var(--background-color), var(--primary-color));
+}
+body {
+    background-color: transparent;
+}
+
+header {
+    height: fit-content;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+#sign-up-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#sign-up-content {
+    padding: 50px 30px;
+    background: radial-gradient(#2B722060, transparent);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.74);
+    border-radius: 20px;
+    gap: 25px;
+    display: flex;
+    width: 600px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
+}
+
+#sign-up-icon {
+    align-self: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sign-up-form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sign-up-columns {
+    background-color: transparent;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    width: 300px;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.column > div {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    position: relative;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--background-color);
+}
+
+.material-symbols-outlined:not(#sign-up-icon) {
+    top: 8px;
+    position: absolute;
+    left: 10px;
+    color: var(--button-color);
+}
+
+label {
+    padding-left: 10px;
+}
+
+.sign-up-input {
+    font-size: 16px;
+    padding: 0 0px 0 20px;
+    margin: 0px 10px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    background: transparent no-repeat;
+    background-image: linear-gradient(to bottom, var(--button-color) 63%, var(--button-color) 90%), linear-gradient(to bottom, var(--background-color), var(--background-color));
+    background-size: 0 3px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    transition: background-size 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+.sign-up-input:focus {
+    background-size: 100% 3px, 100% 1px;
+    outline: none;
+}
+
+#sign-up-input::placeholder {
+    color: var(--text-color);
+}
+
+#bio {
+    box-sizing: border-box;
+    padding-top: 7px;
+    min-height: 40px;
+    resize: vertical;
+}
+
+hr {
+    border: 1px solid var(--text-color);
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#signup-below {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-top: 10px;
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    background-color: transparent;
+    transition: transform 0.2s linear,
+                background-color 0.2s linear,
+                color 0.2s linear,
+                text-decoration-color 0.2s linear;
+}
+
+#signup-below:hover {
+    text-decoration-color: var(--background-color);
+    background-color: var(--button-color);
+    color: var(--background-color);
+    transform: scale(1.05);
+}

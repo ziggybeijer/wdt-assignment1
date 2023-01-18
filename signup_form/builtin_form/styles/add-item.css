@@ -1,0 +1,125 @@
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 75px 50px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#add-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 600px;
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+#userinput {
+    background-color: transparent;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+#column-left {
+    display: flex;
+    width: 300px;
+    gap: 15px;
+    flex-direction: column;
+}
+
+#column-right {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+}
+
+#column-left div{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    height: 100%;
+}
+
+#add-form input:not(#image), textarea {
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid var(--text-color);
+    font-size: 16px;
+    padding: 0px 3px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background: transparent no-repeat;
+    background-image: linear-gradient(to bottom, var(--button-color) 63%, var(--button-color) 90%);
+    background-size: 100% 3px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    transition: background-color 0.3s linear;
+    margin-bottom: 10px;
+}
+#add-form input:not(#image):focus, textarea:focus {
+    background-color: var(--item-color-dark);
+    outline: none;
+}
+
+#add-form input::-webkit-outer-spin-button,
+#add-form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#add-form input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#image {
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 205px;
+}
+#image::-webkit-file-upload-button {
+    display: none;
+}
+
+#image::before {
+    content: "Select a file";
+    padding: 0px 3px;
+    margin-right: 5px;
+}
+
+#image-label {
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid var(--text-color);
+    font-size: 14px;
+}
+
+#add-form button, #image::before {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s linear,
+                background-color 0.2s linear,
+                color 0.2s linear;
+}
+
+#add-form button:hover, #image:hover::before {
+    transform: scale(1.03);
+    background-color: var(--button-color);
+    color: var(--background-color);
+}
+
+#submit-button {
+    height: 50px;
+}

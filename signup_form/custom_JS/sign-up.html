@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/sign-up.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+        <title>Sign up - Barter Bazaar</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+
+            <nav>
+                <form action="search.html" id="search-form">
+                    <div>
+                        <span id="searchbar-span"><button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
+                        </span>
+                        <input type="text" placeholder="Search..." name="search" id="searchbar">
+                    </div>
+                </form>
+                <a href="add-item.html">Add an item</a>
+                <a href="log-in.html">Log in</a>
+                <a href="sign-up.html" id ="signup">Sign up</a>
+
+                <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
+            </nav>
+
+            <div id="sign-up-wrapper">
+                <div id="sign-up-content">
+                    <span id="sign-up-icon" class="material-symbols-outlined">
+                        person
+                    </span>
+                    <h3>Welcome!</h3>
+                    <p>Create a new account below</p>
+
+                    <form id="sign-up-form" action="index.html">
+                        <div id="sign-up-columns">
+
+                            <div class="column">
+                                <div>
+                                    <label for="username">Username</label>
+                                    <div class="input-box">
+                                        <input id="username" type="text" required="true" class="sign-up-input" name="username" placeholder="Username">
+                                        <span class="material-symbols-outlined">
+                                            Account_Circle
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="password">Password</label>
+                                    <div class="input-box">
+                                        <input id="password" type="password" required="true" class="sign-up-input" name="password" placeholder="Password">
+                                        <span class="material-symbols-outlined">
+                                            lock
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="fullname">Full name</label>
+                                    <div class="input-box">
+                                        <input id="fullname" type="text" required="true" class="sign-up-input" name="fullname" placeholder="Full name">
+                                        <span class="material-symbols-outlined">
+                                            badge
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="address">Address</label>
+                                    <div class="input-box">
+                                        <input id="address" type="text" required="true" class="sign-up-input" name="address" placeholder="Address">
+                                        <span class="material-symbols-outlined">
+                                            home
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="country">Country</label>
+                                    <div class="input-box">
+                                        <input id="country" type="text" required="true" class="sign-up-input" name="country" placeholder="Country">
+                                        <span class="material-symbols-outlined">
+                                            flag
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="gender">Gender</label>
+                                    <div class="input-box">
+                                        <select class="sign-up-input" name="gender" id="gender">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <span class="material-symbols-outlined">
+                                            transgender
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="IBAN">IBAN</label>
+                                    <div class="input-box">
+                                        <input id="IBAN" type="description" required="true" class="sign-up-input" name="language" placeholder="IBAN">
+                                        <span class="material-symbols-outlined">
+                                            credit_card
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="column">
+                                <div>
+                                    <label for="email">Email</label>
+                                    <div class="input-box">
+                                        <input id="email" type="email" required="true" class="sign-up-input" name="email" placeholder="Email">
+                                        <span class="material-symbols-outlined">
+                                            email
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="rpassword">Repeat password</label>
+                                    <div class="input-box">
+                                        <input id="rpassword" type="password" required="true" class="sign-up-input" name="rpassword" placeholder="Repeat password">
+                                        <span class="material-symbols-outlined">
+                                            lock
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="companyname">Company name (optional)</label>
+                                    <div class="input-box">
+                                        <input id="companyname" type="text" required="false" class="sign-up-input" name="companyname" placeholder="Company name (optional)">
+                                        <span class="material-symbols-outlined">
+                                            Store
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="ZIP-code">ZIP code</label>
+                                    <div class="input-box">
+                                        <input id="ZIP-code" type="text" required="true" class="sign-up-input" name="ZIP-code" placeholder="ZIP code">
+                                        <span class="material-symbols-outlined">
+                                            code
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="language">Language</label>
+                                    <div class="input-box">
+                                        <input id="language" type="text" required="true" class="sign-up-input" name="language" placeholder="Language">
+                                        <span class="material-symbols-outlined">
+                                            flag
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="phone">Phone number</label>
+                                    <div class="input-box">
+                                        <input id="phone" type="tel" required="true" class="sign-up-input" name="phone" placeholder="Phone number">
+                                        <span class="material-symbols-outlined">
+                                            phone
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="bio">About you</label>
+                                    <div class="input-box">
+                                        <textarea id="bio" type="description" required="true" class="sign-up-input" name="language" placeholder="About you"></textarea>
+                                        <span class="material-symbols-outlined">
+                                            edit
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <hr>
+                            <button type="submit" id="signup-below">Sign up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr id="footer-hr">
+            <footer>
+                <p id="footer-left">© Barter Bazaar B.B. 2023</p>
+                <div id="footer-right">
+                    <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
+                    <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
+                </div>
+            </footer>
+        </header>
+    </body>
+</html>
