@@ -41,19 +41,23 @@
                     <h3>Welcome!</h3>
                     <p>Log in to your account</p>
 
-                    <form id="log-in-form" action="index.html">
-                        <div class="log-in-div">
-                            <input type="text" required="true" class="log-in-input" name="username" placeholder="Username">
-                            <span class="icon material-symbols-outlined">
-                                account_circle
-                            </span>
+                    <form id="log-in-form" action="index.html" method="post">
+                        <div>
+                            <div class="log-in-div">
+                                <input type="text" class="log-in-input" name="username" id="username" placeholder="Username">
+                                <span class="icon material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </div>
                         </div>
 
-                        <div class="log-in-div">
-                            <span class="icon material-symbols-outlined">
-                                lock
-                            </span>
-                            <input type="password" required="true" class="log-in-input" name="password" placeholder="Password">
+                        <div>
+                            <div class="log-in-div">
+                                <span class="icon material-symbols-outlined">
+                                    lock
+                                </span>
+                                <input type="password" class="log-in-input" name="password" id="password" placeholder="Password">
+                            </div>
                         </div>
 
                         <label id="cb-label">
@@ -82,5 +86,50 @@
                 </div>
             </footer>
         </header>
+
+        <script>             
+            const form = document.getElementById("log-in-form");
+            form.addEventListener("submit", validateLogin);
+    
+            function createSpecification(element, color, message) {
+                if (element.parentElement.parentElement.getElementsByClassName("specification").length !== 0) {
+                    element.parentElement.parentElement.removeChild(element.parentElement.parentElement.getElementsByClassName("specification")[0]);
+                }
+                const specification = document.createElement("span");
+                element.parentElement.parentElement.appendChild(specification);
+                specification.className = "specification";
+                specification.style.color = color;
+                specification.innerHTML = message;
+            }
+
+            function validateLogin(event) {
+                let valid = true;
+
+                const elements = {
+                    username: document.getElementById("username"),
+                    password: document.getElementById("password"),
+                }
+
+                for (element in elements) {
+                    if (elements[element].value === "") {
+                        valid = false;
+                        createSpecification(elements[element], "red", "This field is required");
+                    } else {
+                        createSpecification(elements[element], "green", "This field is filled in correctly!");
+                    }
+                    
+                }
+                
+                if (!valid) {
+                    event.preventDefault();
+                } else {
+                    let res = "";
+                    for (element in elements) {
+                        res += `${element}: ${elements[element].value}\n`;
+                    }
+                    alert(res);
+                }
+            }
+        </script>
     </body>
 </html>

@@ -17,7 +17,7 @@
             <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
 
             <nav>
-                <form action="search.html" id="search-form">
+                <form action="search.html" id="search-form" method="post">
                     <div>
                         <span id="searchbar-span"><button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
                         </span>
@@ -34,33 +34,33 @@
 
         <div id="wrapper">
             <h1>Add an item</h1>
-            <form action="index.html" id="add-form">
+            <form action="index.html" id="add-form" method="post">
                 <div id="userinput">
                     <div id="column-left">
                         <div>
                             <label for="name">Name</label>
-                            <input type="text" required="true" id="name" name="name">
+                            <input type="text" id="name" name="name">
                         </div>
                         <div>
                             <label for="quantity">Quantity</label>
-                            <input type="number" required="true" min="1" id="quantity" name="quantity">
+                            <input type="number"  id="quantity" name="quantity">
                         </div>
                         <div>
                             <label for="price">Price per item</label>
-                            <input type="number" required="true" min="0" step="0.01" id="price" name="price">
+                            <input type="number" step="0.01" id="price" name="price">
                         </div>
                         <div>
                             <label for="category">Category</label>
-                            <input type="text" required="true" id="category" name="category">
+                            <input type="text" id="category" name="category">
                         </div>
                         <div id="imagediv">
                             <p>Image</p>
-                            <input type="file" required="true" accept="image/*" id="image" name="image">
+                            <input type="file" accept="image/*" id="image" name="image">
                         </div>
                     </div>
                     <div id="column-right">
                         <label for="description">Description</label>
-                        <textarea id="description" required="true" name="description"></textarea>
+                        <textarea id="description" name="description"></textarea>
                     </div>
                 </div>
                 <button  id="submit-button" type="submit">Add the item</button>
@@ -80,5 +80,62 @@
                 <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
             </div>
         </footer>
+
+        <script>
+            const form = document.getElementById("add-form");
+            form.addEventListener("submit", validateItem);
+
+            function createSpecification(element, color, message) {
+                if (element.parentElement.getElementsByClassName("specification").length !== 0) {
+                    element.parentElement.removeChild(element.parentElement.getElementsByClassName("specification")[0]);
+                }
+                const specification = document.createElement("span");
+                element.parentElement.appendChild(specification);
+                specification.className = "specification";
+                specification.style.color = color;
+                specification.innerHTML = message;
+            }
+
+            function validateItem(event) {
+                let valid = true;
+
+                const elements = {
+                    name: document.getElementById("name"),
+                    quantity: document.getElementById("quantity"),
+                    price: document.getElementById("price"),
+                    category: document.getElementById("category"),
+                    image: document.getElementById("image"),
+                    description: document.getElementById("description"),
+                }
+
+                for (element in elements) {
+                    if (elements[element].value === "") {
+                        valid = false;
+                        createSpecification(elements[element], "red", "This field is required");
+                    } else {
+                        createSpecification(elements[element], "green", "This field is filled in correctly!");
+                    }
+                    
+                }
+                if (elements.quantity.value < 1){
+                    valid = false;
+                    createSpecification(elements.quantity, "red", "Please enter a number bigger than or equal to 1")
+                }
+                if (elements.price.value < 0) {
+                    valid = false;
+                    createSpecification(elements.price, "red", "Please enter a non-negative number")
+                }
+                
+                if (!valid) {
+                    event.preventDefault();
+                } else {
+                    let res = "";
+                    for (element in elements) {
+                        res += `${element}: ${elements[element].value}\n`;
+                    }
+                    alert(res);
+                }
+            }
+        </script>
     </body>
 </html>

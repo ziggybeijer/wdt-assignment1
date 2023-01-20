@@ -110,5 +110,63 @@
                 <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
             </div>
         </footer>
+
+        <script>
+            const form = document.getElementById("filter");
+            form.addEventListener("submit", validateSearch);
+
+            function createSpecification(element, color, message) {
+                if (element.parentElement.getElementsByClassName("specification").length !== 0) {
+                    element.parentElement.removeChild(element.parentElement.getElementsByClassName("specification")[0]);
+                }
+                const specification = document.createElement("span");
+                element.parentElement.appendChild(specification);
+                specification.className = "specification";
+                specification.style.color = color;
+                specification.innerHTML = message;
+            }
+
+            function validateSearch(event) {
+                let valid = true;
+
+                const optional = {
+                    quantity: document.getElementById("min-price"),
+                    price: document.getElementById("max-price"),
+                    category: document.getElementById("name"),
+                    image: document.getElementById("category"),
+                    description: document.getElementById("min-rating"),
+                }
+
+                const elements = {
+                    search: document.getElementById("search"),
+                }
+
+                for (element in optional) {
+                    createSpecification(optional[element], "green", "This field is filled in correctly!");
+                }
+
+                for (element in elements) {
+                    if (elements[element].value === "") {
+                        valid = false;
+                        createSpecification(elements[element], "red", "This field is required");
+                    } else {
+                        createSpecification(elements[element], "green", "This field is filled in correctly!");
+                    }
+                }
+                
+                if (!valid) {
+                    event.preventDefault();
+                } else {
+                    let res = "";
+                    for (element in elements) {
+                        res += `${element}: ${elements[element].value}\n`;
+                    }
+                    for (element in optional) {
+                        res += `${element}: ${optional[element].value}\n`;
+                    }
+                    alert(res);
+                }
+            }
+        </script>
     </body>
 </html>
