@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/log-in.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+        <title>Log in - Barter Bazaar</title>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img id="logo" src="images/logo.png" alt="Barter Bazaar logo"></a>
+
+            <nav>
+                <form action="search.html" id="search-form">
+                    <div>
+                        <span id="searchbar-span"><button type="submit" id="searchbar-button"><img id="searchbar-image" src="images/searchbar.png"></button>
+                        </span>
+                        <input type="text" placeholder="Search..." name="search" id="searchbar">
+                    </div>
+                </form>
+                <a href="add-item.html">Add an item</a>
+                <a href="log-in.html">Log in</a>
+                <a href="sign-up.html" id ="signup">Sign up</a>
+
+                <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
+            </nav>
+
+            <div id="log-in-wrapper">
+                <div id="log-in-content">
+                    <span id="log-in-icon" class="material-symbols-outlined">
+                        login
+                    </span>
+                    <h3>Welcome!</h3>
+                    <p>Log in to your account</p>
+
+                    <form id="log-in-form" action="index.html" method="post">
+                        <div>
+                            <div class="log-in-div">
+                                <input type="text" class="log-in-input" name="username" id="username" placeholder="Username">
+                                <span class="icon material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="log-in-div">
+                                <span class="icon material-symbols-outlined">
+                                    lock
+                                </span>
+                                <input type="password" class="log-in-input" name="password" id="password" placeholder="Password">
+                            </div>
+                        </div>
+
+                        <label id="cb-label">
+                            Remember me?
+                            <input type="checkbox" name="remember-cb" id="remember-cb" >
+                            <span id="checkbox"></span>
+                        </label>
+                        <button type="submit" id="log-in-button" >Log in</button>
+                    </form>
+
+                    <hr id="log-in-hr">
+                    <p>Dont have a account?</p>
+                    <a href="sign-up.html" id ="signup-below">Sign up</a>
+                </div>
+            </div>
+
+            <hr id="footer-hr">
+            <footer>
+                <p id="footer-left">© Barter Bazaar B.B. 2023</p>
+                <div id="footer-right">
+                    <a href="mailto:barterbazaar@gmail.com"><img src="images/mail.png" alt="Mail"></a>
+                    <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt="FaceBook"></a>
+                    <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+                    <a href="https://tiktok.com" target="_blank"><img src="images/tiktok.png" alt="Tiktok"></a>
+                </div>
+            </footer>
+        </header>
+
+        <script>             
+            const form = document.getElementById("log-in-form");
+            form.addEventListener("submit", validateLogin);
+    
+            function createSpecification(element, color, message) {
+                if (element.parentElement.parentElement.getElementsByClassName("specification").length !== 0) {
+                    element.parentElement.parentElement.removeChild(element.parentElement.parentElement.getElementsByClassName("specification")[0]);
+                }
+                const specification = document.createElement("span");
+                element.parentElement.parentElement.appendChild(specification);
+                specification.className = "specification";
+                specification.style.color = color;
+                specification.innerHTML = message;
+            }
+
+            function validateLogin(event) {
+                let valid = true;
+
+                const elements = {
+                    username: document.getElementById("username"),
+                    password: document.getElementById("password"),
+                }
+
+                for (element in elements) {
+                    if (elements[element].value === "") {
+                        valid = false;
+                        createSpecification(elements[element], "red", "This field is required");
+                    } else {
+                        createSpecification(elements[element], "green", "This field is filled in correctly!");
+                    }
+                    
+                }
+                
+                if (!valid) {
+                    event.preventDefault();
+                } else {
+                    let res = "";
+                    for (element in elements) {
+                        res += `${element}: ${elements[element].value}\n`;
+                    }
+                    alert(res);
+                }
+            }
+        </script>
+    </body>
+</html>

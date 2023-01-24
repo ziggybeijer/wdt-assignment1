@@ -1,0 +1,114 @@
+h1 {
+    margin: 75px 50px 20px 50px;
+    font-size: 40px;
+}
+
+#wrapper {
+    display: flex;
+    padding: 0px 50px 75px 50px;
+    column-gap: 25px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 200px;
+    row-gap: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+#filter div {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter input {
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid var(--text-color);
+    font-size: 16px;
+    padding: 0px 3px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    background: transparent no-repeat;
+    background-image: linear-gradient(to bottom, var(--button-color) 63%, var(--button-color) 90%);
+    background-size: 100% 3px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    transition: background-color 0.3s linear;
+}
+
+#filter input:focus {
+    background-color: var(--item-color-dark);
+    outline: none;
+}
+
+#filter input::-webkit-outer-spin-button,
+#filter input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#filter input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#filter button {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s linear,
+                background-color 0.2s linear,
+                color 0.2s linear;
+}
+
+#filter button:hover {
+    transform: scale(1.03);
+    background-color: var(--button-color);
+    color: var(--background-color);
+}
+
+#items {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 5px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.item {
+    padding: 10px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+}
+
+.item-dark {
+    background-color: var(--item-color-dark);
+}
+
+.item-light {
+    background-color: var(--item-color-light);
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: flex-start;
+}
+
+.details img {
+    width: 100px;
+}
+
+.price {
+    align-self: flex-end;
+    font-size: 24px;
+}
