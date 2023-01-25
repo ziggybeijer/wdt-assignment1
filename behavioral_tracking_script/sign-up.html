@@ -306,31 +306,92 @@
                     
                 }
                 
-                if (5 > elements.username.value.length || elements.username.value.length > 12 || !elements.username.value.match(/^[A-Z].*[^A-Za-z]$/g)) {
+                const uppercases = "QWERTYUIOPASDFGHJKLZXCVBNM";
+                const lowercases = "qwertyuiopasdfghjklzxcvbnm";
+                const number = "1234567890";
+
+                // Check if username is valid
+                if (5 > elements.username.value.length || elements.username.value.length > 12
+                        || !uppercases.includes(elements.username.value.charAt(0))
+                        || (uppercases + lowercases).includes(elements.username.value.charAt(elements.username.value.length-1))) {
                     valid = false;
-                    createSpecification(elements.username, "red", "Please enter a username with 5 to 12 characters, that begins with a capital letter and ends with a number or special character")
+                    createSpecification(elements.username, "red", "Please enter a username with 5 to 12 characters, that begins with a capital letter and ends with a number or special character");
                 }
 
-                // The default html email regex
-                if (!elements.email.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/g)){
+                // Check if email is valid
+                let emailArray = elements.email.value.split('@');
+                if (emailArray.length !== 2 || emailArray[0].length < 1) {
                     valid = false;
-                    createSpecification(elements.email, "red", "Please enter a valid email address")
+                    createSpecification(elements.email, "red", "Please enter a valid email address");
+                } else {
+                    emailArray = emailArray[1].split('.');
+                    if (emailArray.length < 2) {
+                        valid = false;
+                        createSpecification(elements.email, "red", "Please enter a valid email address");
+                    } else {
+                        for (let substring of emailArray) {
+                            if (substring.length < 1) {
+                                valid = false;
+                                createSpecification(elements.email, "red", "Please enter a valid email address");
+                                break;
+                            }
+                        }
+                    }
                 }
-                if (!elements.password.value.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z\d]).*$/g)) {
+                
+                // Check if password is valid
+                let count = 0;
+
+                for (let c of uppercases) {
+                    if (elements.password.value.includes(c));
+                        count++;
+                        break;
+                }
+                for (let c of lowercases) {
+                    if (elements.password.value.includes(c));
+                        count++;
+                        break;
+                }
+                for (let c of lowercases) {
+                    if (elements.password.value.includes(c));
+                        count++;
+                        break;
+                }
+                for (let c of elements.password.value) {
+                    if (!lowercases.includes(c) &&
+                        !uppercases.includes(c) &&
+                        !number.includes(c)) {
+                            count++;
+                            break;
+                        }
+                }
+
+                if (elements.password.value.length < 12 || count !== 4) {
                     valid = false;
-                    createSpecification(elements.password, "red", "Please enter a password with at least 12 characters that has a combination of uppercase letters, lowercase letters, numbers, and symbols")
+                    createSpecification(elements.password, "red", "Please enter a password with at least 12 characters (preferably 14) that has a combination of uppercase letters, lowercase letters, numbers, and symbols");
                 }
                 if (password.value !== rpassword.value) {
                     valid = false;
-                    createSpecification(elements.rpassword, "red", "the passwords are not the same")
+                    createSpecification(elements.rpassword, "red", "the passwords are not the same");
                 }
-                if (!elements.fullname.value.match(/^[A-Za-z ]+$/g)) {
-                    valid = false;
-                    createSpecification(elements.fullname, "red", "Please enter a valid name")
+
+                for (let c of elements.fullname.value) {
+                    if (!(uppercases + lowercases).includes(c)) {
+                        valid = false;
+                        createSpecification(elements.fullname, "red", "Please enter a valid name");
+                        break;
+                    }
                 }
-                if (!elements.zipCode.value.match(/^[0-9]{4}[A-Za-z]{2}$/g)) {
+                
+                // Check if zipcode is valid
+                if (elements.zipCode.value.length !== 6 || !(number).includes(elements.zipCode.value.charAt(0)) || 
+                    !(number).includes(elements.zipCode.value.charAt(1)) ||
+                    !(number).includes(elements.zipCode.value.charAt(2)) ||
+                    !(number).includes(elements.zipCode.value.charAt(3)) ||
+                    !(uppercases + lowercases).includes(elements.zipCode.value.charAt(4)) ||
+                    !(uppercases + lowercases).includes(elements.zipCode.value.charAt(5))) {
                     valid = false;
-                    createSpecification(elements.zipCode, "red", "Please enter a valid ZIP-code")
+                    createSpecification(elements.zipCode, "red", "Please enter a valid ZIP-code");
                 }
                 
                 event.preventDefault();
