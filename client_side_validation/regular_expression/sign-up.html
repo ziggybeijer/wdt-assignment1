@@ -48,7 +48,7 @@
                                 <div>
                                     <label for="username">Username</label>
                                     <div class="input-box">
-                                        <input id="username" type="text" required="true" minlength="5" maxlength="12" pattern="^[A-Z].*[^A-Za-z]$" class="sign-up-input" name="username" placeholder="Username">
+                                        <input id="username" type="text" required="true" pattern="^[A-Z].{3,10}[^A-Za-z]$" class="sign-up-input" name="username" placeholder="Username">
                                         <span class="material-symbols-outlined">
                                             Account_Circle
                                         </span>
@@ -57,16 +57,16 @@
                                 <div>
                                     <label for="password">Password</label>
                                     <div class="input-box">
-                                        <input id="password" type="password" required="true" minlength="12" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z\d]).*$" class="sign-up-input" name="password" placeholder="Password">
+                                        <input id="password" type="password" required="true" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z\d]).{12,}$" class="sign-up-input" name="password" placeholder="Password">
                                         <span class="material-symbols-outlined">
                                             lock
                                         </span>
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="fullname">Full name</label>
+                                    <label for="fullname">Name</label>
                                     <div class="input-box">
-                                        <input id="fullname" type="text" required="true" pattern="^[A-Za-z ]+$" class="sign-up-input" name="fullname" placeholder="Full name">
+                                        <input id="fullname" type="text" required="true" pattern="^[A-Za-z]+$" class="sign-up-input" name="fullname" placeholder="Name">
                                         <span class="material-symbols-outlined">
                                             badge
                                         </span>
@@ -106,7 +106,7 @@
                                 <div>
                                     <label for="IBAN">IBAN (optional)</label>
                                     <div class="input-box">
-                                        <input id="IBAN" type="description" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
+                                        <input id="IBAN" type="text" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
                                         <span class="material-symbols-outlined">
                                             credit_card
                                         </span>
@@ -127,7 +127,7 @@
                                 <div>
                                     <label for="rpassword">Repeat password</label>
                                     <div class="input-box">
-                                        <input id="rpassword" type="password" required="true" minlength="12" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z\d]).*$" class="sign-up-input" name="rpassword" placeholder="Repeat password">
+                                        <input id="rpassword" type="password" required="true" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^A-Za-z\d]).{12,}$" class="sign-up-input" name="rpassword" placeholder="Repeat password">
                                         <span class="material-symbols-outlined">
                                             lock
                                         </span>
@@ -174,7 +174,7 @@
                                 <div>
                                     <label for="bio">About you (optional)</label>
                                     <div class="input-box">
-                                        <textarea id="bio" type="description" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
+                                        <textarea id="bio" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
                                         <span class="material-symbols-outlined">
                                             edit
                                         </span>

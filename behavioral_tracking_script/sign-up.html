@@ -31,7 +31,7 @@
 
                 <a href="shoppingcart.html" id="shopping-cart-a"><img src="images/shopping_cart.png" alt="Shopping cart"></a>
             </nav>
-            
+
             <div id="data"></div>
 
             <div id="sign-up-wrapper">
@@ -41,7 +41,7 @@
                     </span>
                     <h3>Welcome!</h3>
                     <p>Create a new account below</p>
-                    
+
                     <form id="sign-up-form" action="sign-up.html" method="post">
                         <div id="sign-up-columns">
 
@@ -65,9 +65,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <label for="fullname">Full name</label>
+                                    <label for="fullname">Name</label>
                                     <div class="input-box">
-                                        <input id="fullname" type="text" class="sign-up-input" name="fullname" placeholder="Full name">
+                                        <input id="fullname" type="text" class="sign-up-input" name="fullname" placeholder="Name">
                                         <span class="material-symbols-outlined">
                                             badge
                                         </span>
@@ -107,7 +107,7 @@
                                 <div>
                                     <label for="IBAN">IBAN (optional)</label>
                                     <div class="input-box">
-                                        <input id="IBAN" type="description" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
+                                        <input id="IBAN" type="text" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
                                         <span class="material-symbols-outlined">
                                             credit_card
                                         </span>
@@ -175,7 +175,7 @@
                                 <div>
                                     <label for="bio">About you (optional)</label>
                                     <div class="input-box">
-                                        <textarea id="bio" type="description" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
+                                        <textarea id="bio" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
                                         <span class="material-symbols-outlined">
                                             edit
                                         </span>
@@ -211,13 +211,13 @@
             let time = Date.now();
             let keyPresses = 0;
             let characters = 0;
-            
+
             // The listener detects if a key is pressed
-            
+
             document.addEventListener("keyup", (event) => {
                 // The keyPresses variable is incremented
                 keyPresses++;
-                
+
                 // If the key is a character, the character variable is incremented
                 if (event.key.length === 1 && !(event.altKey || event.ctrlKey || event.metaKey)) {
                     characters++;
@@ -228,35 +228,35 @@
             document.addEventListener("click", () => mouseClicks++);
 
             const form = document.getElementById("sign-up-form");
-            
+
             // This listener detects when a form is submitted and calls the validateSignup(event) function
             // validateSignup(event) then calls update(), which is the function that manages the data relevant to this part of the assignment
             form.addEventListener("submit", validateSignup);
-            
+
             // This function updates the tracking values and displays then on the screen
             function update() {
                 // Get the element where where the data is going to be displayed
                 const dataDiv = document.getElementById("data");
-                
+
                 // Calculate the elapsed time and convert it to minutes and seconds
                 let duration = Date.now() - time;
                 const minutes = Math.floor(duration / 60_000);
                 duration %= 60_000;
                 const seconds = Math.round(duration / 1_000);
-                
+
                 // Display the message
                 dataDiv.innerHTML = `<p>Number of mouse clicks: ${mouseClicks} <br>
                     Total time spent: ${minutes} minutes and ${seconds} seconds<br>
                     Total key presses: ${keyPresses}<br>
                     Total number of characters typed: ${characters}<br><p>`;
-                
-                // Reset variables        
+
+                // Reset variables
                 mouseClicks = 0;
                 time = Date.now();
                 keyPresses = 0;
                 characters = 0;
             }
-            
+
             // This function creates a message below an input field that tells the user if the field is filled in correctly
             function createSpecification(element, color, message) {
                 if (element.parentElement.parentElement.getElementsByClassName("specification").length !== 0) {
@@ -291,7 +291,7 @@
                     iban: document.getElementById("IBAN"),
                     bio: document.getElementById("bio"),
                 }
-                
+
                 for (element in optional) {
                     createSpecification(optional[element], "green", "This field is filled in correctly!");
                 }
@@ -303,9 +303,9 @@
                     } else {
                         createSpecification(elements[element], "green", "This field is filled in correctly!");
                     }
-                    
+
                 }
-                
+
                 const uppercases = "QWERTYUIOPASDFGHJKLZXCVBNM";
                 const lowercases = "qwertyuiopasdfghjklzxcvbnm";
                 const number = "1234567890";
@@ -338,7 +338,7 @@
                         }
                     }
                 }
-                
+
                 // Check if password is valid
                 let count = 0;
 
@@ -382,9 +382,9 @@
                         break;
                     }
                 }
-                
+
                 // Check if zipcode is valid
-                if (elements.zipCode.value.length !== 6 || !(number).includes(elements.zipCode.value.charAt(0)) || 
+                if (elements.zipCode.value.length !== 6 || !(number).includes(elements.zipCode.value.charAt(0)) ||
                     !(number).includes(elements.zipCode.value.charAt(1)) ||
                     !(number).includes(elements.zipCode.value.charAt(2)) ||
                     !(number).includes(elements.zipCode.value.charAt(3)) ||
@@ -393,11 +393,11 @@
                     valid = false;
                     createSpecification(elements.zipCode, "red", "Please enter a valid ZIP-code");
                 }
-                
+
                 event.preventDefault();
-                
+
                 if (valid) {
-                
+
                     // Resets the fields and error messages if the form is valid and builds a string for the alert
                     let res = "";
                     for (element in elements) {
@@ -406,7 +406,7 @@
                         if (elements[element].parentElement.parentElement.getElementsByClassName("specification").length !== 0) {
                             elements[element].parentElement.parentElement.removeChild(elements[element].parentElement.parentElement.getElementsByClassName("specification")[0]);
                         }
-                        
+
                     }
                     for (element in optional) {
                         res += `${element}: ${optional[element].value}\n`;
@@ -420,7 +420,7 @@
 
                     // update() is called
                     update();
-                }            
+                }
             }
         </script>
     </body>

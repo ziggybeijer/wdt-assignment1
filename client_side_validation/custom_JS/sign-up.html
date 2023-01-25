@@ -105,7 +105,7 @@
                                 <div>
                                     <label for="IBAN">IBAN (optional)</label>
                                     <div class="input-box">
-                                        <input id="IBAN" type="description" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
+                                        <input id="IBAN" type="text" class="sign-up-input" name="IBAN" placeholder="IBAN (optional)">
                                         <span class="material-symbols-outlined">
                                             credit_card
                                         </span>
@@ -173,7 +173,7 @@
                                 <div>
                                     <label for="bio">About you (optional)</label>
                                     <div class="input-box">
-                                        <textarea id="bio" type="description" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
+                                        <textarea id="bio" class="sign-up-input" name="bio" placeholder="About you (optional)"></textarea>
                                         <span class="material-symbols-outlined">
                                             edit
                                         </span>
@@ -203,10 +203,10 @@
             </footer>
         </header>
 
-        <script>             
+        <script>
             const form = document.getElementById("sign-up-form");
             form.addEventListener("submit", validateSignup);
-    
+
             function createSpecification(element, color, message) {
                 if (element.parentElement.parentElement.getElementsByClassName("specification").length !== 0) {
                     element.parentElement.parentElement.removeChild(element.parentElement.parentElement.getElementsByClassName("specification")[0]);
@@ -239,7 +239,7 @@
                     iban: document.getElementById("IBAN"),
                     bio: document.getElementById("bio"),
                 }
-                
+
                 for (let element in optional) {
                     createSpecification(optional[element], "green", "This field is filled in correctly!");
                 }
@@ -251,7 +251,7 @@
                     } else {
                         createSpecification(elements[element], "green", "This field is filled in correctly!");
                     }
-                    
+
                 }
 
                 const uppercases = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -286,7 +286,7 @@
                         }
                     }
                 }
-                
+
                 // Check if password is valid
                 let count = 0;
 
@@ -330,9 +330,9 @@
                         break;
                     }
                 }
-                
+
                 // Check if zipcode is valid
-                if (elements.zipCode.value.length !== 6 || !(number).includes(elements.zipCode.value.charAt(0)) || 
+                if (elements.zipCode.value.length !== 6 || !(number).includes(elements.zipCode.value.charAt(0)) ||
                     !(number).includes(elements.zipCode.value.charAt(1)) ||
                     !(number).includes(elements.zipCode.value.charAt(2)) ||
                     !(number).includes(elements.zipCode.value.charAt(3)) ||
@@ -341,7 +341,7 @@
                     valid = false;
                     createSpecification(elements.zipCode, "red", "Please enter a valid ZIP-code");
                 }
-                
+
                 if (!valid) {
                     event.preventDefault();
                 } else {
