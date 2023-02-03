@@ -5,6 +5,8 @@ const userController = require('../controllers/userController');
 // Routes
 router.get('/', userController.view);
 router.post('/', userController.find);
+router.get('/activate/:id', userController.activate);
+router.get('/deactivate/:id', userController.deactivate)
 router.get('/adduser', userController.form);
 router.post('/adduser', userController.create);
 router.get('/edituser/:id', userController.edit);

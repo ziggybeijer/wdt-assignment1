@@ -1,6 +1,14 @@
 const mysql = require('mysql');
 const User = require('../models/user');
 
+// Connection Pool
+let connection = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
+});
+
 // View Users
 exports.view = (req, res) => {
   User.viewUsers()
@@ -56,15 +64,25 @@ exports.delete = (req, res) => {
 
   // });
 
-  // Hide a record
-
   User.deleteUser(req.params.id).then(() => {
     let removedUser = encodeURIComponent('User successeflly removed.');
     res.redirect('/?removed=' + removedUser);
   })
 }
 
-// View Users
+exports.activate = (req, res) => {
+
+  User.activateUser(req.params.id);
+  res.redirect('/');
+}
+
+exports.deactivate = (req, res) => {
+  User.deactivateUser(req.params.id);
+  res.redirect('/');
+}
+
+
+//
 exports.viewall = (req, res) => {
   User.viewAllUsers(req.params.id).then(rows => res.render('view-user', { rows }));
 }

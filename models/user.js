@@ -12,7 +12,7 @@ class User {
     static viewUsers() {
         // User the connection
         return new Promise((resolve, reject) => {
-            connection.query('SELECT * FROM user WHERE status = "active"', (err, rows) => {
+            connection.query('SELECT * FROM user WHERE status = "active" OR status = "none"', (err, rows) => {
                 // When done with the connection, release it
                 console.log('The data from user table: \n', rows);
                 if (!err) {
@@ -108,6 +108,34 @@ class User {
                   throw err;
                 }
               });
+        })
+    }
+
+    static activateUser(id) {
+        return new Promise((resolve, reject) => {
+            connection.query('UPDATE user SET status = ? WHERE id = ?', ['active', id], (err, rows) => {
+                console.log('The data from beer table are: \n', rows);
+                if (!err) {
+                    resolve();
+                } else {
+                  console.log(err);
+                  throw err;
+                }
+            })
+        })
+    }
+
+    static deactivateUser(id) {
+        return new Promise((resolve, reject) => {
+            connection.query('UPDATE user SET status = ? WHERE id = ?', ['none', id], (err, rows) => {
+                console.log('The data from beer table are: \n', rows);
+                if (!err) {
+                    resolve();
+                } else {
+                  console.log(err);
+                  throw err;
+                }
+            })
         })
     }
 
