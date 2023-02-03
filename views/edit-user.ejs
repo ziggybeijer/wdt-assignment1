@@ -1,0 +1,28 @@
+<%- include('./layouts/main-top') %>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+  </ol>
+</nav>
+
+<!-- {{#if alert}} -->
+<% if (locals.alert) { %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <!-- {{alert}} -->
+    <%= alert %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<!-- {{/if}} -->
+<% } %>
+
+<!-- {{#each rows}} -->
+<% for (const row of rows) { %>
+  <form class="row g-3 needs-validation" method="POST" action="/edituser/<%= row.id %>" novalidate> 
+  <%- include('./partials/user-form', {row: row}); %>
+</form>
+<!-- {{/each}} -->
+<% } %>
+
+<%- include('./layouts/main-bottom') %>

@@ -1,3 +1,5 @@
+<%- include('./layouts/main-top') %>
+
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -6,10 +8,10 @@
 </nav>
 
 <div class="view-user p-5">
-  {{#each rows}}
-  <div class="row mb-5">
+  <% for (const row of rows) { %>
+    <div class="row mb-5">
     <div class="col text-center">
-      <h3>{{this.first_name}} {{this.last_name}}</h3>
+      <h3><%= row.first_name %> <%= row.last_name %></h3>
     </div>
   </div>
   <div class="row">
@@ -25,10 +27,10 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row">{{this.first_name}}</th>
-            <td>{{this.last_name}}</td>
-            <td>{{this.email}}</td>
-            <td>{{this.phone}}</td>
+            <th scope="row"><%= row.first_name %></th>
+            <td><%= row.last_name %></td>
+            <td><%= row.email %></td>
+            <td><%= row.phone %></td>
           </tr>
         </tbody>
       </table>
@@ -40,9 +42,11 @@
     </div>
     <div class="row">
       <div class="col">
-        {{this.comments}}
+        <%= row.comments %>
       </div>
     </div>
   </div>
-  {{/each}}
+  <% } %>
 </div>
+
+<%- include('./layouts/main-bottom') %>
